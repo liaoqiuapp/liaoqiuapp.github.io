@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="zh">
+    <meta charset="UTF-8">
+    <title>未受信任的企业级开发者的解决办法</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <link rel="icon" href="data:;base64,=">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: "Microsoft Yahei",Arial,"宋体",Times New Roman,Verdana,Tahoma,Helvetica,STHeiti;
+            background-color: #f8f8f8;
+        }
+        header {
+            padding: 10px;
+            background-color: #ffe8dd;
+            border: 1px solid #ffd5be;
+            font-size: 14px;
+            color: #ff671c;
+            line-height: 1.7;
+        }
+        @media only screen
+        and (-webkit-min-device-pixel-ratio: 2){
+            header {border: .5px solid #ffd5be;}
+        }
+        article {
+            padding: 10px 15px;
+        }
+        h2 {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .title {
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: start;
+        }
+        .title p {
+            font-size: 16px;
+            color: #333333;
+            -webkit-box-flex: 1;
+            line-height: 1.7;
+        }
+        i{
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-top: 4px;
+            margin-right: 6px;
+            border-radius: 3em;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            background-color: #0099FF;
+        }
+        .title span {
+            color: #FF001C;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        .mod-img {
+            display: block;
+            margin: 15px auto 20px auto;
+            width: 90%;
+        }
+        .mod-img-union {
+            width: 100%;
+            margin: 15px auto 20px auto;
+            overflow: auto;
+        }
+        .mod-img-union img {
+            display: block;
+            width: 49%;
+            float: left;
+        }
+        .mod-img-union img:first-child {
+            margin-right: 2%;
+        }
+        footer {
+            color: #333333;
+            font-size: 14px;
+            padding: 10px;
+            line-height: 1.7;
+        }
+        .btn {
+            display: block;
+            background-color: #1B8DFA;
+            width: 280px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            text-decoration: none;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    由于iOS系统权限调整，打开应用需要进入【设置>>通用>>描述文件】(iOS9上叫“描述文件”, iOS10上叫“设备管理”)，信任同名的描述文件即可。
+</header>
+<article>
+    <h2>详细图文教程：</h2>
+    <div class="title"><i>1</i><p>如果打开下载的「游戏或者应用」，出现如下图提示，<span>记住红线部分的描述文件名</span></p></div>
+    <img src="./assets/1.png" class="mod-img">
+    <div class="title"><i>2</i><p>然后在设备中点击<span>【设置>>通用>>描述文件】(iOS9上叫“描述文件”, iOS10上叫“设备管理)，</span>，找到刚才同名的描述文件</p></div>
+    <img src="./assets/2.png" class="mod-img"><img src="./assets/3.png" class="mod-img">
+    <div class="title"><i>3</i><p>点击文件，<span>选择【信任】</span>，然后就能正常打开APP了</p></div>
+    <img src="./assets/4.png" class="mod-img">
+    <!--<a href="tongbutui.mobileprovision" class="btn">一键跳转，立即信任</a>-->
+</article>
+
+</body>
+</html>
