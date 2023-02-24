@@ -44,9 +44,9 @@
           <img class="codePc" src="./images/code.png" alt="">
         </div>
         <div class="btns h5">
-          <a href="" class="btn" id="dow_app">
+          <a href="javascript:;" class="btn" id="dow_app">
             <img src="./images/logo.png" width="24">
-            <b id="dow_app_text">加载中...</b>
+            <b id="dow_app_text">下载聊球</b>
           </a>
           
           <a href="https://pan.baidu.com/s/112t0kFOhOohTqku5dMqaKQ?pwd=liao" class="btn" style="visibility:hidden" id="dow_app_android">
@@ -95,55 +95,38 @@
     }
 
     function getPakeage() {
-      var url = "https://api.liaoqiu.cc/api/getAppHost";
-      // 1、创建对象
-      var ajax = new XMLHttpRequest();
-      // 2、建立连接
-      // true:请求为异步  false:同步
-      ajax.open("GET", url, true);
-      // 3、发送请求
-      ajax.send(null);
-      // 4、监听状态的改变
-      ajax.onreadystatechange = function () {
-        if (ajax.readyState === 4) {
-          if (ajax.status === 200) {
-            var res = JSON.parse(ajax.responseText == "" ? '{}' : ajax.responseText);
-            // console.log(res.data.download_apk);
-            const dow_app = document.getElementById("dow_app")
-            const dow_app_pc = document.getElementById("dow_app_pc")
-            const dow_app_text = document.getElementById("dow_app_text")
-            dow_app_text.innerText = "下载聊球";
-            if (/macintosh|mac os x/i.test(navigator.userAgent)) {
-              //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
-              dow_app.href =res.data.download_ios;
-              dow_app_pc.href=res.data.download_ios;
-              //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
-              document.querySelector('.help').style.display = "block"
-            }
-            else if (/windows|win32/i.test(navigator.userAgent)) {
-              dow_app.href = res.data.download_apk;
-              dow_app_pc.href=res.data.download_apk;
-              //document.querySelector('.tips').style.display = "none"
-            }
-            else if (/android/i.test(navigator.userAgent)) {
-              dow_app.href = res.data.download_apk;
-              dow_app_pc.href=res.data.download_apk;
-              //document.querySelector('.tips').style.display = "none"
-              //document.getElementById("dow_app_android").style.visibility = "visible"
-
-            }
-            else{
-                 dow_app_pc.href = res.data.download_apk; 
-            }
-             if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-              //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
-              dow_app.href =res.data.download_ios;
-              //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
-            }
-           
-          }
+        const dow_app = document.getElementById("dow_app")
+        const dow_app_pc = document.getElementById("dow_app_pc")
+        const dow_app_text = document.getElementById("dow_app_text")
+        var ios_href="https://testflight.apple.com/join/TcFOOg9m";
+        var android_href="https://os11zb.oss-cn-hongkong.aliyuncs.com/liaoqiu-flutter-apk/update/2.0.6.apk";
+        if (/macintosh|mac os x/i.test(navigator.userAgent)) {
+          //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
+          dow_app.href = ios_href;
+          dow_app_pc.href=ios_href;
+          //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
+          document.querySelector('.help').style.display = "block"
         }
-      }
+        else if (/windows|win32/i.test(navigator.userAgent)) {
+          dow_app.href = android_href;
+          dow_app_pc.href=android_href;
+          //document.querySelector('.tips').style.display = "none"
+        }
+        else if (/android/i.test(navigator.userAgent)) {
+          dow_app.href = android_href;
+          dow_app_pc.href=android_href;
+          //document.querySelector('.tips').style.display = "none"
+          //document.getElementById("dow_app_android").style.visibility = "visible"
+        }
+        else{
+             dow_app.href = ios_href;
+             dow_app_pc.href = android_href; 
+        }
+         if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+          //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
+          dow_app.href =ios_href;
+          //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
+        }
     }
   </script>
 </body>
