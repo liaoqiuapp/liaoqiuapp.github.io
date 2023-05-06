@@ -47,10 +47,10 @@
           <a href="javascript:;" class="btn" id="dow_app">
             <img src="./images/logo.png" width="24">
             <b id="dow_app_text">下载聊球</b>
-			<b id="dow_app_text" style="FONT-SIZE: 10PX;">v2.1.3</b>
+			<b id="dow_app_android_v" style="visibility: hidden;FONT-SIZE: 10PX;">v2.1.3</b>
           </a>
           
-          <a href="https://pan.baidu.com/s/1MW4tNP5dbRi3gmRPdJJjgQ?pwd=liao" class="btn" style="visibility: visible;margin-top: 15px;" id="dow_app_android">
+          <a href="https://pan.baidu.com/s/1MW4tNP5dbRi3gmRPdJJjgQ?pwd=liao" class="btn" style="visibility: hidden;margin-top: 15px;" id="dow_app_android">
             <img src="./images/wp.png" width="24">
              <b id="dow_app_text">网盘下载</b>
           </a>
@@ -75,6 +75,7 @@
   <script>
      if (/android/i.test(navigator.userAgent)){
            document.getElementById("dow_app_android").style.visibility = "visible";
+		    document.getElementById("dow_app_android_v").style.visibility = "visible";
       }
   
     window.onload = function () {
