@@ -49,13 +49,13 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url('https://os11zb.oss-cn-hongkong.aliyuncs.com/static/wwwdow/bg1.jpg');
+    background-image: url('https://oszb11.oss-cn-hongkong.aliyuncs.com/static/wwwdow/bg1.jpg');
     /* background-image: url('./images/bg.jpg'); */
 
   }
 
   .main .bg2 {
-    background-image: url('https://os11zb.oss-cn-hongkong.aliyuncs.com/static/wwwdow/bg2.jpg');
+    background-image: url('https://oszb11.oss-cn-hongkong.aliyuncs.com/static/wwwdow/bg2.jpg');
     /* background-image: url('./images/bg2.jpg'); */
     animation: changeBg 20s linear 2s infinite;
     z-index: 101;
@@ -79,11 +79,11 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-image: url('https://os11zb.oss-cn-hongkong.aliyuncs.com/static/wwwdow/h-bg1.jpg');
+    background-image: url('https://oszb11.oss-cn-hongkong.aliyuncs.com/static/wwwdow/h-bg1.jpg');
   }
 
   .main .bg2 {
-    background-image: url('https://os11zb.oss-cn-hongkong.aliyuncs.com/static/wwwdow/bg2.jpg');
+    background-image: url('https://oszb11.oss-cn-hongkong.aliyuncs.com/static/wwwdow/bg2.jpg');
     animation: changeBgH5 20s linear 2s infinite;
     z-index: 101;
   }
