@@ -48,14 +48,20 @@
         <div class="btns h5">
           <a href="javascript:;" class="btn" id="dow_app">
             <img src="./images/logo.png" width="24">
-            <b id="dow_app_text">下载聊球</b>
+            <b id="dow_app_text">官方下载</b>
 			<b id="dow_app_android_v" style="visibility: hidden;FONT-SIZE: 10PX;">v2.1.4</b>
           </a>
-          
+          </div>
+		  <div class="btns h5">
+			<a href="https://1drv.ms/u/s!As20EiWKu1yua_TIAqBYAQhihy4?e=huzUFm" class="btn" style="visibility: hidden;margin-top: 15px;" id="dow_app_android_1">
+			    <img src="./images/wp_1.png" width="24">
+			     <b id="dow_app_text">网盘下载</b>
+			  </a>
           <a href="https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao" class="btn" style="visibility: hidden;margin-top: 15px;" id="dow_app_android">
             <img src="./images/wp.png" width="24">
              <b id="dow_app_text">网盘下载</b>
           </a>
+		  
         </div>
       </div>
     </div>
@@ -78,6 +84,8 @@
      if (/android/i.test(navigator.userAgent)){
            document.getElementById("dow_app_android").style.visibility = "visible";
 		    document.getElementById("dow_app_android_v").style.visibility = "visible";
+			document.getElementById("dow_app_android_1").style.visibility = "visible";
+			
       }
   
     window.onload = function () {
