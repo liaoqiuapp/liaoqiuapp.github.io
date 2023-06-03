@@ -15,12 +15,12 @@
   <noscript>
     <strong>请升级浏览器</strong>
   </noscript>
-  <img class="imgTag" src="images/bg1.jpg?0514" alt="">
+ <!-- <img class="imgTag" src="images/bg1.jpg?0514" alt="">
   <img class="imgTag" src="images/bg2-2.jpg?0514" alt="">
   <img class="imgTag" src="images/bg3.jpg?0514" alt="">
   <img class="imgTag" src="images/h-bg1.jpg?0514" alt="">
   <img class="imgTag" src="images/h-bg2.jpg?0514" alt="">
-  <img class="imgTag" src="images/h-bg3.jpg?0514" alt="">
+  <img class="imgTag" src="images/h-bg3.jpg?0514" alt=""> -->
   <div class="wh-full main">
     <div class="wh-full absolute bg"></div>
     <div class="wh-full absolute bg2"></div>
@@ -28,12 +28,12 @@
       <a class="logo" href="##"></a>
       <span class="menu" id="menu"></span>
     </div>
-    <div class="wh-full absolute blue">
+    <!-- <div class="wh-full absolute blue">
       <div class="cont">
         <img src="./images/logo.png" width="70">
         <div class="h3">聊球，球迷聚集地</div>
       </div>
-    </div>
+    </div> -->
     <div class="wh-full absolute content">
       <div class="cont">
         <h1 class="h1">聊球 ，球迷聚集地</h1>
@@ -49,19 +49,21 @@
           <a href="javascript:;" class="btn" id="dow_app" target="_blank">
             <img src="./images/logo.png" width="24">
             <b id="dow_app_text">官方下载</b>
-			<b id="dow_app_android_v" style="visibility: hidden;FONT-SIZE: 10PX;">v2.1.5</b>
+            <b id="dow_app_android_v" style="visibility: hidden;FONT-SIZE: 10PX;">v2.1.5</b>
           </a>
-          </div>
-		  <div class="btns h5">
-			<a href="https://1drv.ms/u/s!As20EiWKu1yueWPhkKSkyJnkzmU?e=8dGk5g" target="_blank" class="btn" style="visibility: hidden;margin-top: 15px;" id="dow_app_android_1">
-			    <img src="./images/wp_1.png" width="24">
-			     <b id="dow_app_text">网盘下载</b>
-			  </a>
-          <a href="https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao" target="_blank" class="btn" style="visibility: hidden;margin-top: 15px;" id="dow_app_android">
+        </div>
+        <div class="btns h5">
+          <a href="https://1drv.ms/u/s!As20EiWKu1yueWPhkKSkyJnkzmU?e=8dGk5g" target="_blank" class="btn"
+            style="visibility: hidden;margin-top: 15px;" id="dow_app_android_1">
+            <img src="./images/wp_1.png" width="24">
+            <b id="dow_app_text">网盘下载</b>
+          </a>
+          <a href="https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao" target="_blank" class="btn"
+            style="visibility: hidden;margin-top: 15px;" id="dow_app_android">
             <img src="./images/wp.png" width="24">
-             <b id="dow_app_text">网盘下载</b>
+            <b id="dow_app_text">网盘下载</b>
           </a>
-		  
+
         </div>
       </div>
     </div>
@@ -81,13 +83,13 @@
     </div>
   </div>
   <script>
-     if (/android/i.test(navigator.userAgent)){
-           document.getElementById("dow_app_android").style.visibility = "visible";
-		    document.getElementById("dow_app_android_v").style.visibility = "visible";
-			document.getElementById("dow_app_android_1").style.visibility = "visible";
-			
-      }
-  
+    if (/android/i.test(navigator.userAgent)) {
+      document.getElementById("dow_app_android").style.visibility = "visible";
+      document.getElementById("dow_app_android_v").style.visibility = "visible";
+      document.getElementById("dow_app_android_1").style.visibility = "visible";
+
+    }
+
     window.onload = function () {
       var menu = document.getElementById('menu');
       var contact = document.getElementById('contact');
@@ -100,44 +102,44 @@
           menu.setAttribute('class', 'menu close');
         }
       }
-    //   document.getElementById("dow_app_android").style.visibility = "hidden"
-     
+      //   document.getElementById("dow_app_android").style.visibility = "hidden"
+
       getPakeage()
-    
+
     }
 
     function getPakeage() {
-        const dow_app = document.getElementById("dow_app")
-        const dow_app_pc = document.getElementById("dow_app_pc")
-        const dow_app_text = document.getElementById("dow_app_text")
-        var ios_href="https://liaoqiu.wvflsw.com/wbzwk";
-        var android_href="https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.5.apk";
-		// console.log(navigator.userAgent)
-        if (/macintosh|mac os x/i.test(navigator.userAgent)) {
-          dow_app.href = ios_href;
-          dow_app_pc.href=ios_href;
-          document.querySelector('.help').style.display = "block"
-        }
-        else if (/windows|win32/i.test(navigator.userAgent)) {
-          dow_app.href = android_href;
-          dow_app_pc.href=android_href;
-          //document.querySelector('.tips').style.display = "none"
-        }
-        else if (/android/i.test(navigator.userAgent)) {
-          dow_app.href = android_href;
-          dow_app_pc.href=android_href;
-          //document.querySelector('.tips').style.display = "none"
-          //document.getElementById("dow_app_android").style.visibility = "visible"
-        }
-        else{
-             dow_app.href = ios_href;
-             dow_app_pc.href = android_href; 
-        }
-         if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-          //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
-          dow_app.href =ios_href;
-          //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
-        }
+      const dow_app = document.getElementById("dow_app")
+      const dow_app_pc = document.getElementById("dow_app_pc")
+      const dow_app_text = document.getElementById("dow_app_text")
+      var ios_href = "https://liaoqiu.wvflsw.com/wbzwk";
+      var android_href = "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.5.apk";
+      // console.log(navigator.userAgent)
+      if (/macintosh|mac os x/i.test(navigator.userAgent)) {
+        dow_app.href = ios_href;
+        dow_app_pc.href = ios_href;
+        document.querySelector('.help').style.display = "block"
+      }
+      else if (/windows|win32/i.test(navigator.userAgent)) {
+        dow_app.href = android_href;
+        dow_app_pc.href = android_href;
+        //document.querySelector('.tips').style.display = "none"
+      }
+      else if (/android/i.test(navigator.userAgent)) {
+        dow_app.href = android_href;
+        dow_app_pc.href = android_href;
+        //document.querySelector('.tips').style.display = "none"
+        //document.getElementById("dow_app_android").style.visibility = "visible"
+      }
+      else {
+        dow_app.href = ios_href;
+        dow_app_pc.href = android_href;
+      }
+      if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+        //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
+        dow_app.href = ios_href;
+        //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
+      }
     }
   </script>
 </body>
