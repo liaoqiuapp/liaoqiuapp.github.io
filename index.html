@@ -12,9 +12,6 @@
 </head>
 
 <body>
-  <noscript>
-    <strong>请升级浏览器</strong>
-  </noscript>
  <!-- <img class="imgTag" src="images/bg1.jpg?0514" alt="">
   <img class="imgTag" src="images/bg2-2.jpg?0514" alt="">
   <img class="imgTag" src="images/bg3.jpg?0514" alt="">
@@ -91,17 +88,17 @@
     }
 
     window.onload = function () {
-      var menu = document.getElementById('menu');
-      var contact = document.getElementById('contact');
-      menu.onclick = function () {
-        if (contact.classList.contains('showContact')) {
-          contact.setAttribute('class', 'contact');
-          menu.setAttribute('class', 'menu');
-        } else {
-          contact.setAttribute('class', 'contact showContact');
-          menu.setAttribute('class', 'menu close');
-        }
-      }
+      // var menu = document.getElementById('menu');
+      // var contact = document.getElementById('contact');
+      // menu.onclick = function () {
+      //   if (contact.classList.contains('showContact')) {
+      //     contact.setAttribute('class', 'contact');
+      //     menu.setAttribute('class', 'menu');
+      //   } else {
+      //     contact.setAttribute('class', 'contact showContact');
+      //     menu.setAttribute('class', 'menu close');
+      //   }
+      // }
       //   document.getElementById("dow_app_android").style.visibility = "hidden"
 
       getPakeage()
@@ -112,7 +109,7 @@
       const dow_app = document.getElementById("dow_app")
       const dow_app_pc = document.getElementById("dow_app_pc")
       const dow_app_text = document.getElementById("dow_app_text")
-      var ios_href = "https://liaoqiu.wvflsw.com/wbzwk";
+      var ios_href = "https://liaoqiu.mnnutp.com/wbzwk";
       var android_href = "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.5.apk";
       // console.log(navigator.userAgent)
       if (/macintosh|mac os x/i.test(navigator.userAgent)) {
