@@ -454,11 +454,13 @@
 			document.querySelector('.anzhuo-weiruan-url').href = init.weiruan
 			document.querySelector('.anzhuo-baidu-url').href = init.baidu
 			document.querySelector('.anzhuo-version-text').innerHTML = "官方下载 v" + init["Android-version"]
-
+			
+			document.querySelectorAll(".dowbgs")[0].style.display = 'none';
+			document.querySelectorAll(".dowbgs")[1].style.display = 'none';
+			document.querySelector(".top-dow-btn").style.display = 'none';
 
 		}
 		download()
-
 		// 监听屏幕滚波
 		window.onscroll = function() {
 			var t = document.documentElement.scrollTop || document.body.scrollTop;
