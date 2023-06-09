@@ -14,6 +14,51 @@
 		<link rel="stylesheet" href="../assets_2/index-00cc34dc.css">
 	</head>
 
+	<style>
+		.jumbotron-lg {
+			padding: 2rem 0 !important;
+		}
+		
+		.carousel-inner img {
+			animation: fade 9s infinite;
+			opacity :0;
+		}
+
+		.carousel-inner img:nth-child(1) {
+			animation-delay: 0s;
+		}
+
+		.carousel-inner img:nth-child(2) {
+			animation-delay: 3s;
+		}
+
+		.carousel-inner img:nth-child(3) {
+			animation-delay: 6s;
+		}
+		
+		.dow-logos{
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		@keyframes fade {
+
+			0%,
+			16.666% {
+				opacity: 0;
+			}
+
+			16.666%,
+			50% {
+				opacity: 1;
+			}
+
+			50%,
+			100% {
+				opacity: 0;
+			}
+		}
+	</style>
 	<body>
 		<nav class="navbar navbar-expand-lg fixed-top d-none d-sm-block " aria-label="Ninth navbar example">
 			<div class="container-xl">
@@ -46,38 +91,32 @@
 		</nav>
 		<!-- 移动端导航 -->
 		<div class=" anzhuo-nav-box ">
-			<div
+			<div id="anzhuo-nav-box"
 				class="heand-mobl p-2 d-block d-sm-none  fixed-top py-2 d-flex justify-content-between align-items-center">
 				<div class="d-flex  justify-content-between align-items-center">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAABblBMVEX9/f3///8ex+8sivcrjPYeyu7y+v4sh/cgwfAdze4huvAfxO8thfgnoPQonPQitvEjsvEhvvAqkfYplvUqk/Uc0u3J6fwugfgrjvYpmfUmp/MmpPMkrPLk9v7v+vzj7/zV7/zI7fzG8fqh1fpUmvlIkfmd4viR2PhqwPcqkvVKyvMkr/IlqfIdz+7h9/vU9fvI4vut3vpgofqT0fmHwflPtfVX0PPX7P3i8fyv1vzh9Pu66fuwz/uXwfuNu/uIuPuf3/mS0/lCjvk5jPmEz/hAk/gyh/iQ3fddtfd00/Z1zvZDp/ZEofZCrPUpnPVw4/MzrvMtx/A42e8r0u/w9v3k8v3O4fzW5vu84fuix/tyqvus5fprpvq55vlQlvmFyvh4wvhstvhgq/iD1feD1PeE0vdYrPdFnfc3mvaN5vV02PVnzPVcvfUwmvV+5fRZyPRNvfQzqfQ+vfM/uPM/t/M9wPJV2fE7zvA7zfA51e8lHwFcAAABjklEQVQ4y+3SV1PCQBQF4Kwl1gCKRrGCSBErUiyI9F4UsPfee/ffey7M+JIFxgffODPZSSbf7E3uXaGWf8nQ9Uehri3nNi9WZg/dLY11bc3NHa3qZAU6nScHCKfWvOrLusKva1VrxgdWy8ipfPckoPvGZosl4Cb6nue5cIXc1whjsV3GBt8m+vqlOM+NkPsUGWMGAxbR1S+pVDO8DanuNEMsZ7TKkqTSOTnwGy5nxlanfktykDFjJqvTXnF+hRposyU8tyi8fuewulI6bVfnsPITqdFmpn/0MERvFZlR2zXWO6OE1D9UNFgIGmUscA1KOEV9BmRPBK245uDqN5VjpgH78T5sl+WtI9wswDUJyrgx4BfaLOBwGOPo5yXcLAeaMV/NuRy2Myp7vOCEa1/iHbH34kFwiQTF9Ak5k8DLPhwGfCjCOTvJ9WBDXixwNOBUeqzkRoUyCZDLYiAlZ6Kx8GPPSKrqjjJ/cQ/XW6wLVyHLs6ORSCgaDXnxUAUemIJB75pQJb6dPd/2hlDLH/MDh9E4IM4Xmi4AAAAASUVORK5CYII="
-						class="dow-logos me-2" alt="">
+					<img src="../assets_2/annroidicon.png" class="dow-logos me-2" alt="">
 					<div class="text-white">
-						<p class="l1 mb-0">聊球国际版下载</p>
+						<p class="l1 mb-0">聊球下载</p>
 						<p class="l2  mb-0">热情足球迷的终极选择</p>
 					</div>
 				</div>
 				<div>
-					<img class="dowbgs"
-						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAcCAMAAADr5TknAAABnlBMVEUAAAAXjf8eof8akv8Yk/8Xkf8cmf8gpv8aj/8amP8ntf8akf8krv8gn/8YlP8doP8Ulv8fov8Zj/8msf8Qi/8Xof8bmP8qtP8ks/8Rif8Xn/8hr/8VnP8irP8QjP8blP8akP8akv8cnv8bm/8blv8ak/8bmf8eof/j8v8dmP8fpf8Tif8Zjv8hoP8ipf8Zj//G5P8lq/8hrf8Vi/8hq/8dpP8VjP8fp/8fnf8Wjv8al/8qtf8coP8ho/8em/8Vkv+q2P8/0v8kqf8gn/8Wlf8vvf8jsf8fqf8WmP8Ti/9B1v+o1f8suP8osP8Ykv/x+P+az/8ktP8ps/8Tj/+Myv80xf9wvP8nrv87qP83of82nv9E2P880P80zv82x/9+wf8xwP8jp/8ywv9Rq/8Ynv+43f8uxv9zwf8uu/9FqP9R4v86zP83y/8rwf8nuf8ltv9Bov8pnf9E1f8xyv8pvf9tt/9VsP84o//T6f9M3f+Oy/+NyP9htP8tmv/U6//T6/+c0v+Lxv97v/8to/9I2f8yxP9lu/////+Myf9Xtf8QtcfNAAAAH3RSTlMA72DfX0Dv35BQ789AICDv38+/kCDv38/Pz7++kI9fdqToSQAAA/RJREFUOMuNlflfEkEchtfKsvu+j9mt3ZrNVUYJZCWQNERchVWTAk0URKU8IAUyb+38r3tnh0v7pQeYGZj5Pryz+9ldqc6lm3cvLIVnM5OTM8ufp6ffDA8Pv3nD26kpZzj9eXl5ZvLHbHhpxN8d8XhuP3jUKp3k1Lmu96Pj/pGlMEyOCIX4wMJxNLBkZsMj/vHuHo9nfn5+aOjamWOSy9cDwjISnp0Vki9g6vvm5ieHzc3vU19gmpnJIE13d6TH8xoeiG41RTnr6+jsnOvvggsyJ1M4E4Yy8wN7nJmczCDG0hKCjL7v6noJw7Ohobdv3/b1TbScr1nO63qwoyPARdyEWFzl5x1AxBG/f3x8dJQr+vvnOuef1SUTE97oE2G5clZVg76BjmYTUnVh0AwEc3OdnYHA0+fYDCSwgGi0RezrNCFqMOjz1UxQwdWP0TECAAsGfEO9PImI4o1Go+33JXBG0TQdBLlqACosh6oDo2YGgA8EuSQGi2l6haW9/QwPI8tEVfWaKXQEFap+Li4u/vHx1nf0oc6Rrsa20319duFQWNqB+7QktcrQAIgc9hd5KJ9Ov33bD/E2rpdDIJ7jbZnYNB6nlrVjH3q9bliA4WqV2lwuWdOIAwVYBHRCCamEVKoSvDms4nSKaZYOTNPKerNud7uD2zDapBuGS1aAMFVUUCnqRKGMsZBGNULxJ5qmsbTCKTD29StjFJ9CVGgMw7gotRgyR4jyuwSwMpFlKitJS6EK3hyZ5WgenWGmcjgoB6WdglvEcUPTIhlIwxGRaBKauCpDs7Vlc43MNfjOUilqpVxmjgexS4elUlVjcCTDBeoeO01IOUe4JpvNphRkorDgxVKynN52GSlm2qa3YLEdN3DCAGzKsQgPSYQICSVkQGXZ3mlsytHI+Mc0ZXF24I1bbi/3wOJs6mIjDA5kkhKyW1QAqrdtjRa34xpQNJZEKogATaXMeCGbNXHKEQLckNrk+iFOJhIJO7G/iy6v0TRje3la/J3QONBoWgxYe+yXlbZydjprAlHdJrU6Ch6F5N/VKRdz6STJI1wNlkSDUw9ozNqKbe3FXKYZE8e/FRcDBALVQVcb9Fbqw7zTEk6SFDXA06EU5tP80iSiAjx30AXPTyLmegVqr2MUaudWerG55tl/UF0KGbzgTvW2JWZxfT/9T45Jz16p3op99fnXVV78S0B0Yr7Z2bgZX22s9tR4eZweIEaYayx/ffVU0wPmXK2sxyESibyq0d0E/x4BMFaV1y+feNw51c2Vg5yxKmtrY2ODgpoOsnOIcoJLjx9eGMTytdXV1Y2NjZWVlYWFhfX19Y811tcXAH7f2MCStQv3bl6qF/8FC12M0PNU7pkAAAAASUVORK5CYII="
-						alt="">
+					<img class="dowbgs" src="../assets_2/downnow.png" alt="">
 				</div>
 			</div>
 		</div>
 		<div class="ios-nav-box">
-			<div
+			<div id="ios-nav-box"
 				class="heand-mobl   p-2 d-block d-sm-none  fixed-top py-2 d-flex justify-content-between align-items-center">
 				<div class="d-flex  justify-content-between align-items-center">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAACGVBMVEUAAAAlmPk7hf80i/1icf9rbf9IhfpZef0IsPCWWP+dVP+FYfppcPgNrPMFs/ECte8Lr/GTWP+IYP8Jr+9spf+DYf2bVvydVPxBpfpEovoNrvOTWf92Z/+bVf+gUv8Tp/KPWv9hc/6JXv+aVf8UpvSMWv8SqPOZVv8EtPGdUv9qbv+BYf8LsfQAt+8Qp+////8im/gbofYRqvQfnvcNrfMXpPV4Zv8Gs/GBYv+FX/+KXf8CtvCTWf+OW/+cVP8plfotkvtmb/8wj/ygUv9rbf8/g/9VeP9Zdv99ZP8Jr/FDgf9MfP9Qev9icf+XV/8Vp/R0aP+XyP04if47hv9If/80jPxec/8mmPiUyv0UpvVvav+axf7d2f9fdP9va/98Y/8JsPJ4v/twa/+PW/+YV/8mmPkVp/U3if4YpPYKsPGpvf9Ai/kfnfeiwP9Hfv9zaP+DYf9QgPxIhvlldfNucPLz+P/Y3P/a2/+vxf+Es/+NsP5rif56vPxaq/t4aPnw8v/m8P/Z6v/V5P/T3//W3v/U0P+dw/+fwf+vrP94of+LlP+Wjv9Ifv/M4/6kz/7N0v1/uf01jP3i4vy7zftmkPvq6/ra1/qli/q5vfmNXvnU2viUW/hcfPHNxf/Cvf+fs/+gpf+FkP/f5v6dwv6Sn/6cy/10sP1jgv18Zv3U3Ptwu/pjtfonmPmGePlxbPmAXvlwbPiJYPdUgPOXl0moAAAAL3RSTlMA/v7+/v7+/mBf/v7+7+/XgCAQEP7+/v7+/v7v7u7f397ez8/PkJCPj4B/X18gIHFfsDkAAAJxSURBVDjLjZR3WxNBEMYvmqIUafbeu55GTawoiiW2FFskIJjjAh6SkJjeQJqANOnN3nv5hM7t7d1lszzR+fv3vO/M7szLQJUVb2g8eOgAf/rM2VuOG+cv37xy9cLF29cqKu/ZTLVHj23eVsKg2ltotIrgHRFsWIDBGgCrEHj81JrFIrfowWGj9QgGFzaAopdQBPDkdSD3LbHIIGXttpkuSeC6Uman2bLaeFcEeVHRQVgrYN4upsgM1gjUiCA5jA+D9eXrmRNmsPYga0rR7TPVYvCcBFqxIkytKiJrDOZRoCNjap06DFbE1rQiCdbhYVLJ5PBwLBaLx3sTco8EKE9932m3u1xvnzQ3C8LLRA1+cFLRqoLdAEajgtCHwByK3aPtIZZlW4deUz1aCLCdxdX6SqeA9bT1Y1atHjf0SFp7ZHCAzaynVI+wjw9FcJAlqprusVFSBGNSEllz8l9j6y9OeygLfAGK9Dt+db5ns6pr3udZ6RzMBqupnxF71CTtNEgqgjVMrVllb5sX5DCoHldqgAapDUf7mAr9w9oD1mjDP+QC6zLu+pkrlzVxrkvb/k8RzrU32tHR2RkORyKRHgCX5f+enp1dAWBWpJBJ8SkdLPiVzp9envHXPAW6bengnEFbaWrhyimQyB5f8I//47s+DFLWXuWuf8wFxmbG2eciWIT3Ed5Rzsd+JfaCAX18dGika5LbwhTjqaketXCuj5r0wueZ8YlJbgdTpgQpT8aetkIngmNvwiMTPzeWQDTLkfKNSlwAA/7E1NT3FinEC6U14+Ww9xKgQatbu4dBtX/7VnVqAPtl66qCJr3fsGl3KUB/AUhUp0hLM5uPAAAAAElFTkSuQmCC"
-						class="dow-logos me-2" alt="">
+					<img src="../assets_2/iosicon.png" class="dow-logos me-2" alt="">
 					<div class="text-white">
 						<p class="l1 mb-0">聊球国际版下载</p>
 						<p class="l2  mb-0">热情足球迷的终极选择</p>
 					</div>
 				</div>
 				<div>
-					<img class="dowbgs"
-						src="data:image/png;base64,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"
-						alt="">
+					<img class="dowbgs" src="../assets_2/downnow.png" alt="">
 				</div>
 			</div>
 		</div>
@@ -160,14 +199,14 @@
 						</div>
 						<div class="col-12 col-sm-6 align-self-bottom align-items-right text-right">
 							<!-- <img src="images/bann1.png" class="rounded img-fluid"> -->
-							<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+							<div id="carouselExampleFade" class="carousel slide">
 								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<img src="../assets_2/bann1-0ca91429.png" class="d-block w-100 h-100" alt="...">
-									</div>
-									<div class="carousel-item">
-										<img src="../assets_2/bann2-2ece038d.png" class="d-block w-100 h-100" alt="...">
-									</div>
+									<img src="../assets_2/bann1-0ca91429.png" class="carousel-item d-block w-100 h-100"
+										alt="...">
+									<img src="../assets_2/bann2-2ece038d.png" class="carousel-item d-block w-100 h-100"
+										alt="...">
+									<img src="../assets_2/bann3-sd2323ss.png" class="carousel-item d-block w-100 h-100"
+										alt="...">
 								</div>
 							</div>
 						</div>
@@ -350,12 +389,12 @@
 	</body>
 	<script>
 		var init = {
-			"iso": "https://www.apple.com/cn/ios/app-store/",
-			"android": "https://www.anzhuo.com/",
-			"Android-version": "1.0.1",
-			"ios-version": "1.0.2",
-			"baidu": 'https://www.baidu.com/',
-			"weiruan": 'https://www.weiruan.com/',
+			"iso": "https://liaoqiu.chpuzh.com/wbzwk",
+			"android": "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.6.apk",
+			"Android-version": "2.1.6",
+			"ios-version": "1.0.0",
+			"baidu": 'https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao',
+			"weiruan": 'https://1drv.ms/u/s!As20EiWKu1yueilikkdlrmRzKoA?e=AoQpGW',
 		}
 		var _test = [{
 				text: '“聊球的群组功能非常实用。我可以轻松地创建和管理不同的群组，与兴趣相投的朋友们共同交流和分享。而且，它的通知提醒功能让我不会错过任何重要的消息，真的很方便。”',
@@ -414,7 +453,7 @@
 					return { //移动终端浏览器版本信息 
 						ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端 
 						android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -
-						1, //android终端或uc浏览器 //u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+							1, //android终端或uc浏览器 //u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
 						iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器 
 						iPad: u.indexOf('iPad') > -1, //是否iPad 
 					};
@@ -454,10 +493,9 @@
 			document.querySelector('.anzhuo-weiruan-url').href = init.weiruan
 			document.querySelector('.anzhuo-baidu-url').href = init.baidu
 			document.querySelector('.anzhuo-version-text').innerHTML = "官方下载 v" + init["Android-version"]
-			
-			document.querySelectorAll(".dowbgs")[0].style.display = 'none';
-			document.querySelectorAll(".dowbgs")[1].style.display = 'none';
-			document.querySelector(".top-dow-btn").style.display = 'none';
+
+			document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
+			document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
 
 		}
 		download()
@@ -467,12 +505,12 @@
 			var nav = document.querySelector('.nav-box')
 			if (t > 500) {
 				// 选择所有class为dowbgs 隐藏它
-				document.querySelectorAll(".dowbgs")[0].style.display = 'block';
-				document.querySelectorAll(".dowbgs")[1].style.display = 'block';
+				document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'block';
+				document.querySelectorAll(".ios-nav-box")[0].style.display = 'block';
 				document.querySelector(".top-dow-btn").style.display = 'block';
 			} else {
-				document.querySelectorAll(".dowbgs")[0].style.display = 'none';
-				document.querySelectorAll(".dowbgs")[1].style.display = 'none';
+				document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
+				document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
 				document.querySelector(".top-dow-btn").style.display = 'none';
 			}
 		}
