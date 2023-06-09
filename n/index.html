@@ -18,25 +18,26 @@
 		.jumbotron-lg {
 			padding: 2rem 0 !important;
 		}
-		
+
 		.baidupan {
 			margin-left: 0.625rem;
 		}
-		
+
 		.pb-4 {
-			padding-bottom: 0rem!important;
+			padding-bottom: 0rem !important;
 		}
+
 		.mb-4 {
-		    margin-bottom: 0rem!important;
+			margin-bottom: 0rem !important;
 		}
-		
+
 		.dow-app-anzhuo {
 			border-radius: 10px !important;
 		}
-		
+
 		.carousel-inner img {
 			animation: fade 9s infinite;
-			opacity :0;
+			opacity: 0;
 			margin-top: 2rem;
 		}
 
@@ -51,8 +52,8 @@
 		.carousel-inner img:nth-child(3) {
 			animation-delay: 6s;
 		}
-		
-		.dow-logos{
+
+		.dow-logos {
 			width: 2.5rem;
 			height: 2.5rem;
 		}
@@ -117,7 +118,9 @@
 					</div>
 				</div>
 				<div>
-					<img class="dowbgs" src="../assets_2/downnow.png" alt="">
+					<a class="topdown_and">
+						<img class="dowbgs" src="../assets_2/downnow.png" alt="">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -132,7 +135,9 @@
 					</div>
 				</div>
 				<div>
-					<img class="dowbgs" src="../assets_2/downnow.png" alt="">
+					<a class="topdown_ios">
+						<img class="dowbgs" src="../assets_2/downnow.png" alt="">
+					</a>
 				</div>
 			</div>
 		</div>
@@ -405,7 +410,7 @@
 	</body>
 	<script>
 		var init = {
-			"iso": "https://liaoqiu.chpuzh.com/wbzwk",
+			"ios": "https://liaoqiu.chpuzh.com/wbzwk",
 			"android": "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.6.apk",
 			"Android-version": "2.1.6",
 			"ios-version": "1.0.0",
@@ -487,16 +492,16 @@
 
 		if (CheckIsAndroid() == 'iphone') {
 			//如果是IOS 显示 .ios-box
-			document.querySelector('.ios-box').style.display = 'block'
+			// document.querySelector('.ios-box').style.display = 'block'
 			document.querySelector('.anzhuo-box').style.display = 'none'
 			document.querySelector('.anzhuo-nav-box').style.display = 'none'
-			document.querySelector('.ios-nav-box').style.display = 'block'
+			// document.querySelector('.ios-nav-box').style.display = 'block'
 			//如果是IOS
 		}
 		if (CheckIsAndroid() == 'android') {
-			document.querySelector('.anzhuo-box').style.display = 'block'
+			// document.querySelector('.anzhuo-box').style.display = 'block'
 			document.querySelector('.ios-box').style.display = 'none'
-			document.querySelector('.anzhuo-nav-box').style.display = 'block'
+			// document.querySelector('.anzhuo-nav-box').style.display = 'block'
 			document.querySelector('.ios-nav-box').style.display = 'none'
 			//如果是Android
 		}
@@ -505,14 +510,12 @@
 
 			// 修改 a 链接
 			document.querySelector('.anzhuo-url').href = init.android
+			document.querySelector('.topdown_and').href = init.android
 			document.querySelector('.ios-url').href = init.ios
+			document.querySelector('.topdown_ios').href = init.ios
 			document.querySelector('.anzhuo-weiruan-url').href = init.weiruan
 			document.querySelector('.anzhuo-baidu-url').href = init.baidu
 			document.querySelector('.anzhuo-version-text').innerHTML = "官方下载 v" + init["Android-version"]
-
-			document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
-			document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
-
 		}
 		download()
 		// 监听屏幕滚波
@@ -520,13 +523,22 @@
 			var t = document.documentElement.scrollTop || document.body.scrollTop;
 			var nav = document.querySelector('.nav-box')
 			if (t > 500) {
+				if (CheckIsAndroid() == 'iphone') {
+					document.querySelectorAll(".ios-nav-box")[0].style.display = 'block';
+				}
+
+				if (CheckIsAndroid() == 'android') {
+					document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'block';
+				}
 				// 选择所有class为dowbgs 隐藏它
-				document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'block';
-				document.querySelectorAll(".ios-nav-box")[0].style.display = 'block';
 				document.querySelector(".top-dow-btn").style.display = 'block';
 			} else {
-				document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
-				document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
+				if (CheckIsAndroid() == 'iphone') {
+					document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
+				}
+				if (CheckIsAndroid() == 'android') {
+					document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
+				}
 				document.querySelector(".top-dow-btn").style.display = 'none';
 			}
 		}
