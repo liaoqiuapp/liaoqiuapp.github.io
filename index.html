@@ -1,143 +1,557 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>聊球官方下载</title>
-  <meta name="keywords" content="聊球,聊球app,聊球下载,聊球官方下载">
-  <meta name="description" content="聊球APP是一款你身边的安全社交工具，你可以轻松与全球好友畅聊自己用图片分享的独特观点，也可以分享自己的生活好友或世界，让世界喝彩而不用担心为你心动！">
-  <link rel="stylesheet" href="index.css?0521" />
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>聊球官方下载</title>
+		<meta name="keywords" content="聊球,聊球app,聊球下载,聊球官方下载">
+		<meta name="description" content="聊球APP是一款你身边的安全社交工具，你可以轻松与全球好友畅聊自己用图片分享的独特观点，也可以分享自己的生活好友或世界，让世界喝彩而不用担心为你心动！">
 
-<body>
- <!-- <img class="imgTag" src="images/bg1.jpg?0514" alt="">
-  <img class="imgTag" src="images/bg2-2.jpg?0514" alt="">
-  <img class="imgTag" src="images/bg3.jpg?0514" alt="">
-  <img class="imgTag" src="images/h-bg1.jpg?0514" alt="">
-  <img class="imgTag" src="images/h-bg2.jpg?0514" alt="">
-  <img class="imgTag" src="images/h-bg3.jpg?0514" alt=""> -->
-  <div class="wh-full main">
-    <div class="wh-full absolute bg"></div>
-    <div class="wh-full absolute bg2"></div>
-    <div class="header" id="header">
-      <a class="logo" href="##"></a>
-      <span class="menu" id="menu"></span>
-    </div>
-    <!-- <div class="wh-full absolute blue">
-      <div class="cont">
-        <img src="./images/logo.png" width="70">
-        <div class="h3">聊球，球迷聚集地</div>
-      </div>
-    </div> -->
-    <div class="wh-full absolute content">
-      <div class="cont">
-        <h1 class="h1">聊球 ，球迷聚集地</h1>
-        <h3 class="h6">一直在您身边</h3>
-        <div class="btns pc">
-          <a href="javascript:;" class="btn" id="dow_app_pc">
-            <img src="./images/logo.png" width="24">
-            下载聊球
-          </a>
-          <img class="codePc" src="./images/code.png" alt="">
-        </div>
-        <div class="btns h5">
-          <a href="javascript:;" class="btn" id="dow_app">
-            <img src="./images/logo.png" width="24">
-            <b id="dow_app_text">官方下载</b>
-            <b id="dow_app_android_v" style="visibility: hidden;FONT-SIZE: 10PX;">v2.1.6</b>
-          </a>
-        </div>
-        <div class="btns h5">
-          <a href="https://1drv.ms/u/s!As20EiWKu1yueilikkdlrmRzKoA?e=AoQpGW" class="btn"
-            style="visibility: hidden;margin-top: 15px;" id="dow_app_android_1">
-            <img src="./images/wp_1.png" width="24">
-            <b id="dow_app_text">网盘下载</b>
-          </a>
-          <a href="https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao" class="btn"
-            style="visibility: hidden;margin-top: 15px;" id="dow_app_android">
-            <img src="./images/wp.png" width="24">
-            <b id="dow_app_text">网盘下载</b>
-          </a>
+		<link rel="stylesheet" href="./assets/swiper.css" />
+		<script src="./assets/swiper.js"></script>
+		<script type="module" crossorigin src="./assets/index-b8a46066.js"></script>
+		<link rel="stylesheet" href="./assets/index-00cc34dc.css">
+	</head>
 
-        </div>
-      </div>
-    </div>
-    <div class="contact" id="contact">
-      <div class="cont">
-        <h2>联系我们</h2>
-        <div class="text">
-          <p>邮箱: liaoqiu188@gmail.com</p>
-          <p>网址: liaoqiu.com</p>
-        </div>
-        <h2>关于我们</h2>
-        <div class="text">
-          <p>聊球APP 是一款你身边的安全社交工具，你可以轻松与全球好友畅聊自己用图片分享的独特观点，也可以分享自己的生活好友或世界，让世界喝彩而不用担心为你心动！</p>
-        </div>
-      </div>
-      <span class="copy">© 2022 LiaoQiu Inc.</span>
-    </div>
-  </div>
-  <script>
-    if (/android/i.test(navigator.userAgent)) {
-      document.getElementById("dow_app_android").style.visibility = "visible";
-      document.getElementById("dow_app_android_v").style.visibility = "visible";
-      document.getElementById("dow_app_android_1").style.visibility = "visible";
+	<style>
+		.jumbotron-lg {
+			padding: 2rem 0 !important;
+		}
 
-    }
+		.baidupan {
+			margin-left: 0.625rem;
+		}
 
-    window.onload = function () {
-      // var menu = document.getElementById('menu');
-      // var contact = document.getElementById('contact');
-      // menu.onclick = function () {
-      //   if (contact.classList.contains('showContact')) {
-      //     contact.setAttribute('class', 'contact');
-      //     menu.setAttribute('class', 'menu');
-      //   } else {
-      //     contact.setAttribute('class', 'contact showContact');
-      //     menu.setAttribute('class', 'menu close');
-      //   }
-      // }
-      //   document.getElementById("dow_app_android").style.visibility = "hidden"
+		.pb-4 {
+			padding-bottom: 0rem !important;
+		}
 
-      getPakeage()
+		.mb-4 {
+			margin-bottom: 0rem !important;
+		}
 
-    }
+		.dow-app-anzhuo {
+			border-radius: 10px !important;
+		}
 
-    function getPakeage() {
-      const dow_app = document.getElementById("dow_app")
-      const dow_app_pc = document.getElementById("dow_app_pc")
-      const dow_app_text = document.getElementById("dow_app_text")
-      var ios_href = "https://liaoqiu.hnimjn.com/wbzwk";
-      var android_href = "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.6.apk";
-      // console.log(navigator.userAgent)
-      if (/macintosh|mac os x/i.test(navigator.userAgent)) {
-        dow_app.href = ios_href;
-        dow_app_pc.href = ios_href;
-        document.querySelector('.help').style.display = "block"
-      }
-      else if (/windows|win32/i.test(navigator.userAgent)) {
-        dow_app.href = android_href;
-        dow_app_pc.href = android_href;
-        //document.querySelector('.tips').style.display = "none"
-      }
-      else if (/android/i.test(navigator.userAgent)) {
-        dow_app.href = android_href;
-        dow_app_pc.href = android_href;
-        //document.querySelector('.tips').style.display = "none"
-        //document.getElementById("dow_app_android").style.visibility = "visible"
-      }
-      else {
-        dow_app.href = ios_href;
-        dow_app_pc.href = android_href;
-      }
-      if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-        //dow_app.href = 'itms-services://?action=download-manifest&url=' + res.data.download_ios;
-        dow_app.href = ios_href;
-        //dow_app.href = "https://liaoqiu.druzlai.com/2hx2z";
-      }
-    }
-  </script>
-</body>
+		.carousel-inner img {
+			animation: fade 9s infinite;
+			opacity: 0;
+			margin-top: 2rem;
+		}
+
+		.item-img {
+			width: 4rem !important;
+			height: 4rem !important;
+			margin-top: 1rem;
+		}
+
+		.carousel-inner img:nth-child(1) {
+			animation-delay: 0s;
+		}
+
+		.carousel-inner img:nth-child(2) {
+			animation-delay: 3s;
+		}
+
+		.carousel-inner img:nth-child(3) {
+			animation-delay: 6s;
+		}
+
+		.dow-logos {
+			width: 2.5rem;
+			height: 2.5rem;
+		}
+
+		@keyframes fade {
+
+			0%,
+			16.666% {
+				opacity: 0;
+			}
+
+			16.666%,
+			50% {
+				opacity: 1;
+			}
+
+			50%,
+			100% {
+				opacity: 0;
+			}
+		}
+	</style>
+	<body>
+		<nav class="navbar navbar-expand-lg fixed-top d-none d-sm-block " aria-label="Ninth navbar example">
+			<div class="container-xl">
+				<a class="navbar-brand col-2 col-xs-2 col-md-2 col-lg-2" href="#">
+					<img class="logo" src="./assets/logo-33a74c19.png" alt="">
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarsExample07XL">
+					<div class="me-auto mb-2   mb-lg-0"></div>
+					<ul class="navbar-nav align-items-center">
+						<li class="nav-item">
+							<a class="nav-link nav-color" href="#tab1">首页</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-color" href="#tab2">功能介绍</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link nav-color" href="#tab4">联系我们</a>
+						</li>
+						<li class=" top-dow-btn">
+							<a href="#" class="btn btn-lg btn-primary btn-icon dow-btn">下载App</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- 移动端导航 -->
+		<div class=" anzhuo-nav-box ">
+			<div id="anzhuo-nav-box"
+				class="heand-mobl p-2 d-block d-sm-none  fixed-top py-2 d-flex justify-content-between align-items-center">
+				<div class="d-flex  justify-content-between align-items-center">
+					<img src="./assets/annroidicon.png" class="dow-logos me-2" alt="">
+					<div class="text-white">
+						<p class="l1 mb-0">聊球下载</p>
+						<p class="l2  mb-0">热情足球迷的终极选择</p>
+					</div>
+				</div>
+				<div>
+					<a class="topdown_and">
+						<img class="dowbgs" src="./assets/downnow.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="ios-nav-box">
+			<div id="ios-nav-box"
+				class="heand-mobl   p-2 d-block d-sm-none  fixed-top py-2 d-flex justify-content-between align-items-center">
+				<div class="d-flex  justify-content-between align-items-center">
+					<img src="./assets/annroidicon.png" class="dow-logos me-2" alt="">
+					<div class="text-white">
+						<p class="l1 mb-0">聊球下载</p>
+						<p class="l2  mb-0">热情足球迷的终极选择</p>
+					</div>
+				</div>
+				<div>
+					<a class="topdown_ios">
+						<img class="dowbgs" src="./assets/downnow.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+			data-bs-smooth-scroll="true" tabindex="0">
+			<div id="tab1" class="bg-topss  mb-0 jumbotron-lg bg-warning position-relative">
+				<div class="container-fluid text-dark container-xl h-100">
+					<div class="d-lg-flex text-white align-items-center justify-content-between  pl-lg-5">
+						<div class="col-12 col-sm-6 pt-4 pb-4">
+							<div class=" pb-5 ">
+								<h1 class="display-3"><strong>连接热爱, 畅所欲言</strong> </h1>
+								<h2 class="display-7">
+									共同追寻精彩世界 </h2>
+							</div>
+							<h5 class="font-weight-light mb-4 tps">精彩消息随时看、热门话题不错过！让你话题永不断线，陪你畅聊每一天！</h5>
+							<!-- <h5 class="tps"></h5> -->
+							<!-- 移动端隐藏 -->
+							<div class="container text-center d-none d-sm-block " style="padding-top: 20px;">
+								<div class="row">
+									<div class="col">
+										<img class="img-fluid" src="./assets/code-329526a8.png" alt="">
+									</div>
+									<div class="col d-flex flex-column justify-content-center">
+										<a href="#"
+											class="btn anzhuo_url btn-lg dow-app-st btn-outline-dark btn-round mb-3">
+											<img class="p-2"
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAANlBMVEUAAAD////////////////////////////////////////////////////////////////////xY8b8AAAAEXRSTlMA3yBAgO8Qv5BwoGBQz4+vMIHHGewAAACYSURBVDjL7ZNLDkIxCEWBQj/vp3f/m7WtWmNl4MDEyTsDILmHpB1ALzT482Dh+BxXiCNEO8qFjVMOrOSxYCBefiAXdIJC3f2roGGy4dNYAbCh09v8D8ZEoh8iUgtmuCWx5QokX9iB8nieeEJo9RS+F1JrnhAZyFTZ1ugKJFuggTnCGzrlVmgGlT7Iff/vwu4IOs4pw8Zh3QA6Ch7IYg7WEwAAAABJRU5ErkJggg=="
+												alt="">
+											<span class="text-white">安卓下载</span>
+										</a>
+										<a href="#"
+											class="btn btn-lg dow-app-st btn-outline-dark btn-round mt-1 ios_url"><img
+												class="p-2"
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
+												alt="">
+											<span class="text-white">苹果下载</span></a>
+									</div>
+								</div>
+							</div>
+							<!-- 移动端显示 -->
+							<div class="dow-btn  d-block d-sm-none ">
+								<!-- ios -->
+								<div class="ios-box text-center">
+									<a href="#" target="_blank"
+										class="btn mx-auto d-inline-flex align-items-center btn-primary btn-lg px-5  dow-app-anzhuo btn-round my-3 main_ios_url">
+										<img class="dow-img-icon  me-1"
+											src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
+											alt="">
+										<span class="text-white">官方下载</span>
+									</a>
+								</div>
+								<!-- 安卓 -->
+								<div class="anzhuo-box">
+									<a href="#"
+										class="btn android_url mx-auto d-inline-flex align-items-center btn-primary btn-lg px-5  dow-app-anzhuo  btn-round my-3 ">
+										<img class="dow-img-icon  me-1"
+											src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
+											alt="">
+										<span class="text-white anzhuo-version-text">官方下载 v2.1.6</span>
+									</a>
+									<div class="d-flex justify-content-start">
+										<a href="#" target="_blank"
+											class="btn d-flex anzhuo-weiruan-url align-items-center btn-primary btn-lg px-3  dow-app-anzhuo  btn-round my-3">
+											<img class="dow-img-icon  me-1"
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANhSURBVHgBrVZLaBNRFD0vyWTS/BprS5VkURF/IFQFQXAjuBEFdelKpa4UPwvBDy4UdeXShbjzgyDoSlGrIlRFQRTRulF0oa0t9t+mTdskk5nrvW8y01jS2tLecnpn3rx3z73nzssbYBYjojTjDKOV0UtTNsBoY5xmNGG+JosYj2nudmPORDyxhTFM87cs49j/gp+nhdv5mYIfpcWzFi+u8jRn185IViMfydt48C2Lb30FlEDIJA3sWZtEU8qcSYwRxkal1C+P4Ca7A9VmXn03gMuvezUJ8Z8iguMAAb4+tKkOF7en0RAPVVvaygQ7VTn7n9VmnHvxB1fe9EoG0wDX88XqJWG8PbIeqVhVkoyM7qsc6Rot4e7XcbT3FPDoew5GMAS7WADZDpwygfK8Q/jRY+Hw/R+4e3BdNYL9UkEbX2yTu2sfR3HpbRYWa6AcN0t+DrtkozCegzU5obP2SHQRjnv94dQmNGcS0wmeCkE/X9Tfah/DyReDelFAdC5LQTqYS1YqFpHPDsGxbVeigIKZSiJkhrFlZQo7VsSwd00cTbW+XH1CIMux4fpvdGWLvsyeBPqhU86WuCxS3GSuxAjAqE1CMYmXiPh0IoR7e5ZhTb2hGTTBm45J7L7T7TfRI/Ca6d1HogZijVEYMQO2RRjPcUWTRQ6i/ql4Q6OJl/szmkBq6e3LWY1UsvUEVc5WedIEgFh9DaIMyVZaY9skhaAmHkYwHMTYcJ5lcwl4OT52F/ChO4/N6cgQL8cn2TjcWZBlc0PZM1koEkI8HcfStUsRaYjC5j3Jj1HiQBZDe4kWDCBRH4UZMzm40uOCzhFLCvgiFbzenKnZURdWGMwTzGQYkSURGJydVFISiRy3Y1NbgeBUqCj/gpEgzFAENFqENWFhVZ3uwTPpQVpe/4dfx3Di/YSWhDBtT+na4Qd1fVlzb4zcJMQ31yq82rdMblcEeDtzd9G6e10Cxzcm+BWFX6YvBUtTdMgft7XnecxkVcwTLI8GcXtXgwS/Vflb1CS9YKQ6czaed+Txud+CRfCz9IzI8+TLIxbgF2Bro4G9q6JImWqUh5qFoGKhPmgWy6ofPPzgAi3cLmA2E3Zyj7/5mhyzLZiLkXvo35xH8Ce0gK8L+WxpI/dTxTP5hHnKOMvIzBbjLwKuJlH7WsjDAAAAAElFTkSuQmCC"
+												alt="">
+											<span class="text-white">网盘下载</span>
+										</a>
+										<a href="#" target="_blank"
+											class="baidupan btn me-4 anzhuo-baidu-url d-flex align-items-center btn-primary btn-lg px-3  dow-app-anzhuo  btn-round my-3">
+											<img class="dow-img-icon  me-1"
+												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAyVBMVEUAAAD29vb29vb29vb39/f39/f19fX39/f29vb29vb39/f29vb29vb19fX19fX5+fn29vYrp+Hx9PZNtOXv8/bZ6/Oj1u2Qzuw/ruMxqOLr8vXg7vTc7PPK5fHC4vGb0+2U0Ox4xOlaueZTtuVFsOS73vCr2O6IyuuAx+k7rePlBxfl7/Ti7vT17e1ywehqv+htwOdiu+bQ2uVltd/i196TwN7j0ddAndPty9Dyw8ZDkcaEn8Hxqq91d59qb5zNM0jELUXnLTrVJTjxLCp5AAAAEHRSTlMA+irmvqx49OyAXFge6/J3ujLxlQAAARhJREFUKM91UueagyAQRAG7OdDEFlsSU6/3Xt//oY7l4PNMvuwPmB3WZdYBqTBdgg2GyYmpCEVTm6mwadDzfsj+heNp3jLYIAzrj/eAH574wAcOO4gQJFCdVWlba0yFoJHC6zzL8o3WZiJLwZqnRdHypUpdRBSaLcaMRfOZSgnCcp8+vN7CfjmvziSBEaxRmr/vvp4YKzPOt20EihEM0fD07u37536ddavlBW+gGFpFMXR+3n3wuIR7YvEJhstPt4k4OP98iSdQm4AMglwB4yux3Dx20352C5m2qOGbetUtSkmNm0IOiKjASc75NfQB5dCQgkkhlFWTgSWBtOnwt3vHjVJWOYM+fm96QEf9Y9h7JxbBzMDE1fQvrGoiKHLEcW0AAAAASUVORK5CYII="
+												alt="">
+											<span class="text-white">网盘下载</span>
+										</a>
+									</div>
+								</div>
+								<!-- 安卓 -->
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 align-self-bottom align-items-right text-right">
+							<!-- <img src="images/bann1.png" class="rounded img-fluid"> -->
+							<div id="carouselExampleFade" class="carousel slide">
+								<div class="carousel-inner">
+									<img src="./assets/bann1-0ca91429.png" class="carousel-item d-block w-100 h-100"
+										alt="...">
+									<img src="./assets/bann2-2ece038d.png" class="carousel-item d-block w-100 h-100"
+										alt="...">
+									<img src="./assets/bann3-sd2323ss.png" class="carousel-item d-block w-100 h-100"
+										alt="...">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab2" class="container py-4 px-3 mx-auto">
+				<p class="h6 more-text">更多功能等你发现</p>
+				<h1 class="pt-4 pb-4">了解更多您可以通过 聊球 实现的事情。</h1>
+				<div class="row ">
+					<div class="col-sm-4  col-12 d-flex">
+						<div class="p-2 ">
+							<img class="item-img  w-100 "
+								src="data:image/png;base64,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"
+								alt="">
+						</div>
+						<div class="p-2 w-100 d-flex justify-content-center flex-column">
+							<h5 class="card-title pb-2">即时通讯</h5>
+							<p class="card-text">通过实时消息与朋友立即连接，无论身在何处，始终保持畅通的对话。</p>
+						</div>
+					</div>
+					<div class="col-sm-4 col-12 d-flex">
+						<div class="p-2 flex-shrink-1">
+							<img class="item-img w-100"
+								src="data:image/png;base64,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"
+								alt="">
+						</div>
+						<div class="p-2 w-100 d-flex justify-content-center flex-column">
+							<h5 class="card-title pb-2">社交分享</h5>
+							<p class="card-text">轻松分享照片、视频和文件，便于与社交圈子交流回忆、有趣瞬间。</p>
+						</div>
+					</div>
+					<div class="col-sm-4  col-12  d-flex">
+						<div class="p-2 flex-shrink-1">
+							<img class="item-img w-100"
+								src="data:image/png;base64,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"
+								alt="">
+						</div>
+						<div class="p-2 w-100 d-flex justify-content-center flex-column">
+							<h5 class="card-title pb-2">隐私控制</h5>
+							<p class="card-text">保持对隐私的控制，对话和语音加密，稳定的保障获得不一样的体验。</p>
+						</div>
+					</div>
+				</div>
+				<div class="pb-5 d-none d-sm-block "></div>
+				<div class="row">
+					<div class=" col-sm-4  col-12 d-flex">
+						<div class="p-2 flex-shrink-1">
+							<img class="item-img w-100"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAMAAACYaRRsAAAAkFBMVEUAAAD3wFv5w1z3w1z5xFv5w1v6xFz/v2D6xFz6xFz5xFv5w1z5w1v4xFv4w1v5xFz5wlz5xVz5w1z3w1z7xVz6w1r/v1D5xFz3w1z6xF35xV70xFr5xFz////84a36yGb604X72pf85bj++/T++Ov++Or+89397cz96cL83qP6y3D/+/X85bf5y3D6y3H95rjZW3w3AAAAHHRSTlMAIN5An4++EM+/X+/fb5DuUK6vgH8wEO9/j04wc94PGgAABG9JREFUeNrt3euamjAQBuBJOCrFU9W22wFE8Njd9v7vrg91KV1qWWCCZPrk/e2Pz3ES0CQIvYhFOLMnUmIv0p8sZ6G1gYcQ05kfoBLBZLYQMCTPmklUzLctGIhlBziIwF6Acl/XAQ7ogy3UFneCg5tYrOIW5JRVXEWRxQQfaknrZW+ND7f2CN3wAUcgrb7l/YIjcfp17wccjezRydMARzQPoaMvOLJ1t/ad4OiWXof29VEDUnAYbm8T88pbJOaVt0jMK2+bxJ5WeRF9D5qtUDNLaLRG7TjQIEQNTRsGXIAamv974Gk24ErS0/WGp2MbW6gti8MM/LYpeMxolY93ZgjUmoC6JWrNhZopas7iMQVXXGYFRrR4FRjRZXLNuF9iDb7Vv89lMweXNlCykYWPnIZcYV7mXSATFq+OQLTh5hMyMff4TMI3Fq+OKL8rafHbajuS0VXjRnCa1MofVWbIiMPlxqfkq5yFd5dTnkV/yY6neIeKzAE2qEQSZ1GD/PyCSgg1l43kOXqXmshPECLdJYtayFOkC1VMEs9RS3skc+hrBMkxau2YIJFNn9WKvO0TI5FLu5Oo+uFRXSFBIkkaVbJ4d73TMrsfh6hyQRIJSPKSR6VDw9UhrSJ/I7YxMfC5+qwbgyR7QlMoDPwSlWJ8RxyVCCUmBz53KNu+em8ExMB52b8tqpYcyi5GAlrgXfQq7fTqHRKQAsdlgbGVjDiz0QOfGjq44f2dkIAU+NjtM951+UAGCZx1m6i+E0cdPXD0aojXm8AmcI0JbALXmMAmcI0JbALXmMAmcI0JbALXmMAmcI0JbALXmMAmcI0J3BggSeM4TfgETuJfEjaB01vglE3g+JUJrGrJ4NquJa6jLxnk5aJMu0G3I2yaULvsFbeb1p5HX/a6dPuM89EXFrstxqbjL93+HnV5m8XxnLyuSA8ct99+UG1VOCMBMXDSZ4PHFSkASfZtt9CcI0KBFQZOslY7FdM/9jJdkQQkklyiSr7f3Snz992bja8pkkhqYNxHncRI4z94K+MJiVz6KY7k2CFvgkQrmCHZ/qHbcUOkSw9t4mZqNjwvUIHruUV5E1TAoh6UqSI3VjmLE1Rio/JYRHw6ZneyHk4XdccieJ2dQnQ5Hu1hcMq98sTxeBpIZMMH4NXENs9DrB6fY8JcD2Kz6Ykn4HV0XELpI7JgQ2mDLAi+jxzhMews4PVUF8nlWWt/nHJnVWLJ53F2ZYFrXNTakv8D4vS+3H2Gv3kaf/OQ2//hMZIADmrKKdIxagoJ/yLmqKFAVAlZPJsxvGVj08a1GU37C94Kmnma/Zgpt/AOodVUIQUAp8RFXk6Ji7ycEhd5OSX2BbTmafA04lXT/KDh3bEDHYVzHFEwrZJwaOSG4abljYWzhX6sUYosLejNG2Hsfd4ChVjhQ7kCqKYSH8b91Q1sIldxySwX63SOWxD2oGUOPm9AucVgf2w65J+x+qiYdKwtDEksHDdQVFnfmQp4iK9W6CxdX/YsqnRtJ1z0y/oTCIy+dhI1IvYAAAAASUVORK5CYII="
+								alt="">
+						</div>
+						<div class="p-2 w-100 d-flex justify-content-center flex-column">
+							<h5 class="card-title pb-2">多平台支持</h5>
+							<p class="card-text">随时随地使用app，在手机、平板与其他球迷交流和分享，灵活便捷。</p>
+						</div>
+					</div>
+					<div class="col-sm-4  col-12 d-flex">
+						<div class="p-2 flex-shrink-1">
+							<img class="item-img w-100"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAMAAACYaRRsAAAAkFBMVEUAAABbr/dcrvlcrfdbrvlcrvlcrvpcrfpbrfhbrvlbrvlcrvlbrvhgr/9Yp/9crfpbrfhcrfdcrPlcrfhcr/lcrflcr/pcr/tarvpervlar/Rcrvn///+u1/zr9f643PyFwvpwuPpms/nC4f3z+v6j0vz1+v+YzPvg8P5ms/rM5v3M5f2p1fx7vfvW6/642/3h/O/DAAAAG3RSTlMAIN5An+7Pv49f3+9vEBC+kIBQvq+vj38wTjBgq1GzAAAEgklEQVR42u3d63KbMBAF4JW4GNf4HiduD2CMr7m17/92HZowNG7rwAqMtsP3n5ljebWAHCnEohbhzB1oDRbtD1az0FnTTajhzB+hEaPBbKGoTWNnptEw33WoJY47QitG7oIa9+1hhBZ9cVWzgztA6waOqLg5PRQVt6HIaoCbWimzPvaAm3uYGFTDF3RAO9zhvUdH7nnV+wWd0YxKHo7QIS+kmu7RsYd65TtA51Y1uoXyYQGtJEy3j4ll5c0Ty8qbJ5aVt0risVV5Af+zXnEHy6zoqgdY556uCGGh4ZUJN4KFPEX/YtmEK+iJrQ88NcvYgbUcCR34Y1HI6GilOf1BwWrK/lvcR1O6MITlHBktuDQVNsCAI2uAgamQe8bfh9iCt/rPTcX04MKaCi5EmEuacjmvyLuAEI6sigBcemPli9HfeBM5TfiNI6sigIByVqytVqMF3TXeKElNrVhUmUGQQMqDT8Fvogunh6fkGH3qeH6KUxjyiNYwksXHqIZkt4URZXbbyDZRbWaRvxqtsB6OEUNyAl9o0iQ2EdMGbAGtwJR9j9jOGZhcflc7Rwa+g2nJeZLg14N5VWjSYDlFpX2cVpj5j+mPJCodwKIJLNuknPQpKjuVlx0zsDAD78rv9hE1ZBtOUZgH3kaFGDXFUWELBmbgncEwbRif1ThwUtTvI2rLiouPYOAFTqN3J6OrUzCwAsfFAINlz6wJfuAnXgVfft5nMLACn02+UyBlfUH8wOV3moFly5x1/MDRO+RauL4P3Ae+0AfuA1/oA/eBL/SB+8AX+sB94At9YHGB99fXbux7RUqaeQk9g8HoNT8Gy+7mr/kHo8UmJIwlYn5g88Wm082XqspZl2SobZuw11H4gWP+cmu5VLsDAzNwJm1BG7+t/GeoIdtFnAE2D5ztWb/EnpLysi1YCDyHqJRs0grDvE03x6h0AgM7sPkPizGYCFysn5r5BWweODu3m5cf2Ko/P2AGLic9w/4EAwQT2139uPEj+PiBy8jJbeKWgY2l8fN5XyFr8nxIYYzQgvgdGtcHzvWBf9MHzvWBPyCNprUaWDcS+PUlruDwCnM+DWDuEFfyAnNLcmEurgjmVjQDQ3eBAwrB0F3gkLONo8vADimYe6mW9wBz60Y2p70eKjWJVxjzZO2dApYSt/YI2OVe+ipxexppiOETySpiV+Ym1rGcbcJSN2KLqYmvJGvruKbCHCK4VFhDBCXsyJGl5ENdJAyxlnLWWmFIJGqItZzj7IoBvjCF1VbyD4iz+3Y3pz+NLX7z0JP/4RhJogCWCvJ0gopC078oDxbyVJlQxNmM4Vs2MWV80dGsv+Hd0XVjyxYz9YQ+oaxqFVoRSUqc55WUOM8rKXGeV1JiX1FlYwtOI7671h8sfDoOqKbQQ4e8YZlEQiFfmW5WPlgEE+JxNDqgHWIbz3Fz8wmZUDducEtFpoYaN7P8VQ1iIpdxjTlTXLI5bk65Gi3y5mtq3ML10AqvzX/G6qNhOnAm1Ca1CKZeQyPrB0NFN/HNCYO7qa/BovXUDcIFL+tPbEtXFFJ7TT8AAAAASUVORK5CYII="
+								alt="">
+						</div>
+						<div class="p-2 w-100 d-flex justify-content-center flex-column">
+							<h5 class="card-title pb-2">动态消息</h5>
+							<p class="card-text">参与实时足球话题的讨论，与其他球迷分享观点、评论比赛和球队动态。</p>
+						</div>
+					</div>
+					<div class="col-sm-4  col-12  d-flex">
+						<div class="p-2 flex-shrink-1">
+							<img class="item-img w-100"
+								src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAMAAACYaRRsAAAAmVBMVEUAAAA5E4Q4EIA4FIM5E4RAEIA5E4M5E4M4FIQ5FIQ5E4Q5E4Q4EoQ5E4M4FIM5FIQ5E4M2EoU6FIQ5FIQ5FIQ6E4Q5FIT///+cicE6FYTy8PdeQJuQerlSMpOciMHm4vC0ptGDbLJSMZPm4u+Wgb1FIouPe7pGJIxqT6PNxOB3XqrOxODl4e/a0+iomMnNw+BqTqPm4fDBttldsHikAAAAFnRSTlMA3yBA7xCfj76/X69vkH/OUDDPgI5OK+L3JQAABM1JREFUeNrtndt22jAQRS3fAXNL22OwoWAIl0Agbf//4xpoHIWWABoZrKHebzx4ZS9lNJLtGdkiYXeipl8TAiTEQ63RjJyudRPsevPBRSG4tWbHtq6J5zQFCubBd6wr4fguroLrd4q37bZcXBHh28UObg1Xp+aw0t0h6qx0C1K2a7gpDb1Y9lq4OS1PIxoESkA41OENUBJfadErUBqCEMl1FyXiRqq+AUqmpRa+NZROw1MI3wcYgLA5TLdDY16+O2NevjtjXr6XGHtG+QLtc7miAcNonPZtwThObiwiGEj9xIRzYSDu5xPPsAmXIzxTNzyKYezAWBwOGfgwKHhkNMmXIxkCRmObv8QdEv5zCwfDcXikYEnIbIABh9cAAyGTNeP4EBtwV3+ekE0OzulaOT5Y8IXTlNvh5r4dMMHhFRGA/yZs5I3RMVyPTxL+g8MrIoBgL2zEs9XLEAWsGpP5eDNN4kuYPm2zFFrYmkkt7U1jRUbjISjIhypNUFk+xSQ0lAONjc9sG1OhK7fpWTgdxRr8TEHCtawuSGSxJgOQsInLRi/W5jsofKM9YV3FBZCBQERKEsMkliTbbDLDBczS1Xj68ULKzAtID1A+zLf1Ekos1/LaDdTxKVlNBnCygjLZVCeMQ8JOQgbEdAICw3fjZAZVBOH2aEz1lcb0IRYWVFm8R/AERIYJfYiVheWS0QOZOWH5IAuv84AAnX4eFC9QgCa8kHlfgzkhJojCSxnBGizyKP4BBQjCMgk/QYf+mhDENOFfhL90IibGUIAkvL7gf5k+9l4ZpPicFWF5pgnnWfiUzaC35/FUKs538lCAJBy/MTsV529ckmygBl0YesL9SrgSroT3VMKVcCVcCVfC9yh8bH9stHC+P2YjnP+uhFEJV8L/qXCeZ9kI53mWjXAuVAlXwpVwJVwJV8KVcGnCM4JwKa8MRkfeKz729gzO/paked0dFCAJb+I/rCBJB99feUzP/pYsCe8nacLjYl8s/oICJOG5HBod1sQaBvrL8WQGDYbxzV6OL5IiYiKTyUYReoHHCBqMCIFFFaaXv0jmhCoRsvAioVT2HS9SmhKKlAQUkXV2I6LxcBQTqiXodWuLRM9Y+iYTqNLWK2UcZX0o0l8leqWMPtTZxO88LZWU+x/r5p+hToNUjjtJDtoGVumifwGLYbaVF5ICAghoBc9ZXAArEIg+a+MwtaTcoTbKzEspKAe69LaIZx3dZ3JbBL13ajKm+25noBESWnv0lV+WoBIQu9ylsnJgJL0UdL7pt6el2fblMuvkeTOeT6CFzahJOO+d2gUxG3yeTawenzZhro3YbGLim8WrdVxYOV/AAt/K6YIFNt8jR3hMO8fidaqL4HLW2ocud1ZDLPgcZycH+IAQRtPgf0Cc2ctd6x4OOTR53jnMDuoMmJw9nCPu57BZM48OjIw+YP9sRjN+wWtYp/HaMArh3dux6mYZcztqn9vHDLh9LqJtWxfjGXAa8ckPiBi4Ow4sRSIXJeLW7/8zQ2VuLALv//hU1iteCXOv5Vk62A3clNC2dKkL3IxwHw1slKWuNk6IvzFZd4ftC1wRt9W1CqdztQ+bXvNjrG0UjAgcz7omdicIXRSC2w7qtnUTuk4UNMK2AAkhQj+IOjTX3yc/SxQdO4gjAAAAAElFTkSuQmCC"
+								alt="">
+						</div>
+						<div class="p-2 w-100 d-flex justify-content-center flex-column">
+							<h5 class="card-title pb-2">群组聊天</h5>
+							<p class="card-text">创建或加入基于共同兴趣、爱好或社区的群组，与志同道合的人连接。</p>
+						</div>
+					</div>
+				</div>
+				<div class="row py-5 mt-5 align-items-center">
+					<div class="col-12 col-sm-6 ">
+						<img class=" w-100" src="./assets/itam-bg1-81e31cf4.png" alt="">
+					</div>
+					<div class="col-12 col-sm-6  ">
+						<p class="h6 more-text pb-5 ">更多功能等你发现</p>
+						<h2 class="pb-5">端到端加密让您的个人消息和通话更有安全保障。</h2>
+						<div></div>
+						<div class="d-flex align-items-center ">
+							<div class="me-5">
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJCSURBVHgBrVZNbtNAFP7eJIsKCWEWSCndJGXHhpQLFNILcALaG7SVUiRWTVegtlLECQhH4AJpeoLmBE020EhIxBIL/my/fuOkltPU4zTJJ0W253ne9ybzvm8scMBrqrcS4Y2JsKkGr0ThKYfH4S6fu5GgM6jLF1ceyUr+IMQub/dSSbOh6Iug9b0uRzORlJpalgBnjJRxXyh6WkRtsC/9TJK1plY1xNlM1WdjGESo/Xgn3SkSuwIT4mJBgoRIC3h5syKTsAULryCNx8zXtnubkDw91cO59sAFQWUlwN7ollg90d7SSUYY/i5g3ZSOdSePgJX4qjjS/6hc1UXs1T7bcbgR60y4ihazbLsIJMLrb6lusVg7VnvZoEjbrr1kMZ8NRfQCDkSKT7cJLDiGUHBh4675QqcwrKLqegkBWo4YEMJpKRSoZ5CDwftJ9U7E/rLSIvo5KTyTt3mlD1rOjD1ioYX8rjQqOR1SxM6T0SZP4HlDQXcWusS2cz6d2miEc9c7bAzrxhsUrLWeeKz0UeE/ZMjE+7nr5iAJNd+BG16Rbcprg7/K6qlaAVc4+5Bm2s6xIqUGOlKmv/wLadHL8600Re/qQNZNf1/8vF6fl4KFx+2dWD2Vf2lNDcuC4pKreGZvE51ogBoZh1gCmOcn823dPCckVnT0qIWJLAHzbKVFPH3GU3xUcXuOv07jMz6YJLiTJCE70QaDb8fHgLiSW9ewzTM4mPFrZYpsdN5sjt26Op7kR9YpImrM4PzPL3z1G5LpHNfQ8uHOdFrVgAAAAABJRU5ErkJggg=="
+									alt="">
+							</div>
+							<div>
+								<h5>加密聊天</h5>
+								<p class="mb-0">只有与您交谈的人和您自己可以读取或收听消息内容。</p>
+							</div>
+
+						</div>
+						<a href="#tab1" type="button" class="btn detai-tik p-3 btn-primary mt-5 w-100">了解更多</a>
+					</div>
+				</div>
+				<div class="row py-5 align-items-center">
+					<div class="col-12 col-sm-6  ">
+						<p class="h6 more-text pb-5 ">将与相同爱好的人聚集在一起</p>
+						<h2 class="pb-5">通过简单的群组信息，与最密切的群组保持联系。</h2>
+						<div class="d-flex align-items-center ">
+							<div class="me-5">
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJCSURBVHgBrVZNbtNAFP7eJIsKCWEWSCndJGXHhpQLFNILcALaG7SVUiRWTVegtlLECQhH4AJpeoLmBE020EhIxBIL/my/fuOkltPU4zTJJ0W253ne9ybzvm8scMBrqrcS4Y2JsKkGr0ThKYfH4S6fu5GgM6jLF1ceyUr+IMQub/dSSbOh6Iug9b0uRzORlJpalgBnjJRxXyh6WkRtsC/9TJK1plY1xNlM1WdjGESo/Xgn3SkSuwIT4mJBgoRIC3h5syKTsAULryCNx8zXtnubkDw91cO59sAFQWUlwN7ollg90d7SSUYY/i5g3ZSOdSePgJX4qjjS/6hc1UXs1T7bcbgR60y4ihazbLsIJMLrb6lusVg7VnvZoEjbrr1kMZ8NRfQCDkSKT7cJLDiGUHBh4675QqcwrKLqegkBWo4YEMJpKRSoZ5CDwftJ9U7E/rLSIvo5KTyTt3mlD1rOjD1ioYX8rjQqOR1SxM6T0SZP4HlDQXcWusS2cz6d2miEc9c7bAzrxhsUrLWeeKz0UeE/ZMjE+7nr5iAJNd+BG16Rbcprg7/K6qlaAVc4+5Bm2s6xIqUGOlKmv/wLadHL8600Re/qQNZNf1/8vF6fl4KFx+2dWD2Vf2lNDcuC4pKreGZvE51ogBoZh1gCmOcn823dPCckVnT0qIWJLAHzbKVFPH3GU3xUcXuOv07jMz6YJLiTJCE70QaDb8fHgLiSW9ewzTM4mPFrZYpsdN5sjt26Op7kR9YpImrM4PzPL3z1G5LpHNfQ8uHOdFrVgAAAAABJRU5ErkJggg=="
+									alt="">
+							</div>
+							<div>
+								<h5>群组聊天</h5>
+								<p class="mb-0">实时互动让用户感受到与其他球迷共同热爱足球的乐趣。</p>
+							</div>
+						</div>
+						<a href="#tab1" type="button" class="btn detai-tik p-3 btn-primary mt-5 w-100">了解更多</a>
+
+					</div>
+					<div class="col-12 col-sm-6 ">
+						<img class="w-100" src="./assets/itambg2-58bf3e8f.png" alt="">
+					</div>
+				</div>
+
+
+			</div>
+			<div id="tab3" class="user-content ">
+				<div class="container">
+					<div class="swipe-box pb-5  mx-auto">
+						<div class="swiper-box  mx-auto  ">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img src="./assets/av1-ac6acc61.png" /></div>
+									<div class="swiper-slide"><img src="./assets/av2-db931807.png" /></div>
+									<div class="swiper-slide"><img src="./assets/av3-d0b67c1e.png" /></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="textcontent row text-center mx-auto p-4 justify-content-center">
+						<div class="col-12 col-sm-6">
+							<p class="user-text h3 text-white">
+								“聊球的群组功能非常实用。我可以轻松地创建和管理不同的群组，与兴趣相投的朋友们共同交流和分享。而且，它的通知提醒功能让我不会错过任何重要的消息，真的很方便。”</p>
+							<div class="uer-info text-center pt-4">
+								<p class="user-name text-white">Zack.zhan</p>
+								<p class="user-info text-white ">来自旧金山的社交达人 </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tab4" class="container item-footer p-2 py-5 ">
+				<div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
+					<div class="col-12 col-sm-6 mb-3"> <img class="logo" src="./assets/logo-33a74c19.png" alt="">
+					</div>
+					<div class="col-12 col-sm-6 mb-3">
+						<span class="float-sm-none  float-md-end ">
+							<a href="#tab1" type="button"
+								class="btn detai-dows btn-primary btn-lg  w-100 px-4 ">下载聊球APP</a>
+						</span>
+					</div>
+				</div>
+				<p class="email py-3">邮箱: liaoqiu188@gmail.com</p>
+				<div class="d-flex flex-column flex-sm-row justify-content-between align-items-center py-5 footer-nav ">
+					<div class="nav-box d-flex">
+						<a class="item-nn" aria-current="page" href="#">首页</a>
+						<a class="item-nn" href="#tab2">功能介绍</a>
+						<a class="item-nn" href="#tab4">联系我们</a>
+					</div>
+					<div class="pl-lg-5">
+						<div class="d-flex justify-content-start  justify-content-sm-end">
+							<span class=" ">
+								© 2023liaoqiu188.liaoqiu188
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var init = {
+			"ios": "https://lq.hnimjn.com/78qk8",
+			"android": "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.6.apk",
+			"Android-version": "2.1.6",
+			"ios-version": "2.1.6",
+			"baidu": 'https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao',
+			"weiruan": 'https://1drv.ms/u/s!As20EiWKu1yueilikkdlrmRzKoA?e=AoQpGW',
+		}
+		var _test = [{
+				text: '“聊球的群组功能非常实用。我可以轻松地创建和管理不同的群组，与兴趣相投的朋友们共同交流和分享。而且，它的通知提醒功能让我不会错过任何重要的消息，真的很方便。”',
+				name: 'Zack.zhan',
+				info: '来自旧金山的社交达人 ',
+			},
+			{
+				text: '“聊球真是太棒了！它的界面简洁清晰，操作非常流畅。无论是和朋友聊天还是和家人视频通话，都能轻松实现。而且，它的加密功能让我感到放心，真是非常实用的一款应用。”',
+				name: 'JIN',
+				info: '来自中国香港的设计师',
+			},
+			{
+				text: '“我发现聊球的文件传输速度非常快！我可以轻松地向朋友发送照片、视频和其他文件，而不必担心传输过程中的延迟或失败。这在工作中或者与朋友分享重要文件时非常有帮助。”',
+				name: 'sun sun',
+				info: '来自北京的时尚主播 ',
+			},
+		]
+
+		document.addEventListener("visibilitychange", function() {
+			if (document.visibilityState === "visible") {
+				location.reload();
+			}
+		});
+
+
+		// 轮播图// 初始化swiper
+		var mySwiper2 = new Swiper(".swiper-container", {
+			autoplay: 2000, //自动滑动
+			speed: 500, //自动滑动开始到结束的时间（单位ms）
+			loop: true, //开启循环
+			loopedSlides: 5, //在loop模式下使用
+			slidesPerview: "auto", //还需使用该参数设置所要用到的loop个数。
+			slidesPerView: "auto", //设置slider容器能够同时显示的slides数量(carousel模式)。另外，支持'auto'值，会根据容器container的宽度调整slides数目。
+			effect: "coverflow", //可以实现3D效果的轮播,
+			pagination: ".swiper-pagination", //分页器
+			centeredSlides: true, //设定为true时，active slide会居中，而不是默认状态下的居左。c
+			coverflow: {
+				rotate: 0, //slide做3d旋转时Y轴的旋转角度。默认50。
+				stretch: 114, //每个slide之间的拉伸值，越大slide靠得越紧。 默认0。
+				depth: 110, //slide的位置深度。值越大z轴距离越远，看起来越小。 默认100。
+				modifier: 2, //depth和rotate和stretch的倍率，相当于depth*modifier、rotate*modifier、stretch*modifier，值越大这三个参数的效果越明显。默认1。
+				slideShadows: false, //开启slide阴影。默认 true。
+			},
+			onSlideChangeStart: function(swiper) {
+				document.querySelector('.user-text').innerHTML = _test[swiper.realIndex].text
+				document.querySelector('.user-name').innerHTML = _test[swiper.realIndex].name
+				document.querySelector('.user-info').innerHTML = _test[swiper.realIndex].info
+			},
+		});
+
+		function CheckIsAndroid() {
+			var browser = {
+				versions: function() {
+					var u = navigator.userAgent,
+						app = navigator.appVersion;
+					return { //移动终端浏览器版本信息 
+						ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端 
+						android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -
+							1, //android终端或uc浏览器 //u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+						iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器 
+						iPad: u.indexOf('iPad') > -1, //是否iPad 
+					};
+				}(),
+			}
+			var _text = ''
+			if (browser.versions.iPhone) {
+				_text = 'iphone'
+			}
+			if (browser.versions.android) {
+				_text = 'android'
+			}
+			return _text;
+		}
+
+		if (CheckIsAndroid() == 'iphone') {
+			//如果是IOS 显示 .ios-box
+			// document.querySelector('.ios-box').style.display = 'block'
+			document.querySelector('.anzhuo-box').style.display = 'none'
+			document.querySelector('.anzhuo-nav-box').style.display = 'none'
+			// document.querySelector('.ios-nav-box').style.display = 'block'
+			//如果是IOS
+		}
+		if (CheckIsAndroid() == 'android') {
+			// document.querySelector('.anzhuo-box').style.display = 'block'
+			document.querySelector('.ios-box').style.display = 'none'
+			// document.querySelector('.anzhuo-nav-box').style.display = 'block'
+			document.querySelector('.ios-nav-box').style.display = 'none'
+			//如果是Android
+		}
+
+		function download() {
+
+			// 修改 a 链接
+			document.querySelector('.android_url').href = init.android;
+			document.querySelector('.topdown_and').href = init.android;
+			document.querySelector('.main_ios_url').href = init.ios;
+			document.querySelector('.topdown_ios').href = init.ios;
+			document.querySelector('.anzhuo-weiruan-url').href = init.weiruan;
+			document.querySelector('.anzhuo-baidu-url').href = init.baidu;
+			document.querySelector('.anzhuo-version-text').innerHTML = "官方下载 v" + init["Android-version"];
+
+			document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
+			document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
+
+		}
+		download()
+		// 监听屏幕滚波
+		window.onscroll = function() {
+			var t = document.documentElement.scrollTop || document.body.scrollTop;
+			var nav = document.querySelector('.nav-box')
+			if (t > 500) {
+				if (CheckIsAndroid() == 'iphone') {
+					document.querySelectorAll(".ios-nav-box")[0].style.display = 'block';
+				}
+
+				if (CheckIsAndroid() == 'android') {
+					document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'block';
+				}
+				// 选择所有class为dowbgs 隐藏它
+				document.querySelector(".top-dow-btn").style.display = 'block';
+			} else {
+				if (CheckIsAndroid() == 'iphone') {
+					document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
+				}
+				if (CheckIsAndroid() == 'android') {
+					document.querySelectorAll(".anzhuo-nav-box")[0].style.display = 'none';
+				}
+				document.querySelector(".top-dow-btn").style.display = 'none';
+			}
+		}
+	</script>
+
 </html>
