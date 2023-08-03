@@ -63,8 +63,8 @@
 			width: 2.5rem;
 			height: 2.5rem;
 		}
-		
-		.img-fluid{
+
+		.img-fluid {
 			width: 11.25rem;
 			height: 11.25rem;
 		}
@@ -86,57 +86,60 @@
 				opacity: 0;
 			}
 		}
-		
+
 		.modal {
-		  display: none; /* 默认隐藏弹窗 */
-		  position: fixed;
-		  z-index: 1;
-		  left: 0;
-		  top: 0;
-		  width: 100%;
-		  height: 100%;
-		  overflow: auto;
-		  background-color: rgba(0,0,0,0.4); /* 弹窗背景颜色，可自行调整 */
+			display: none;
+			/* 默认隐藏弹窗 */
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.4);
+			/* 弹窗背景颜色，可自行调整 */
 		}
-		
+
 		.modal-content {
-		  background-color: #fefefe;
-		  margin: 15% auto;
-		  padding: 20px;
-		  border: 1px solid #888;
-		  width: 90%;
-		  max-width: 400px;
+			background-color: #fefefe;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 90%;
+			max-width: 400px;
 		}
-		
+
 		.close {
-		  color: #aaa;
-		  float: right;
-		  font-size: 28px;
-		  font-weight: bold;
-		  display: flex;
-		  justify-content: end;
-		  cursor: pointer;
+			padding: 0px;
+			margin: 0px;
+			color: #aaa;
+			height: 15px;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+			display: flex;
+			justify-content: end;
+			cursor: pointer;
 		}
-		
+
 		.close:hover,
 		.close:focus {
-		  color: black;
-		  text-decoration: none;
-		  cursor: pointer;
+			color: black;
+			text-decoration: none;
+			cursor: pointer;
 		}
-		
-		.modal_info{
-			
-		}
-		
-		.modal_btn{
+
+		.modal_info {}
+
+		.modal_btn {
 			display: flex;
 			width: 100%;
 			justify-content: center;
 			margin-top: 1rem;
 		}
-		
-		.modal_btn .btn{
+
+		.modal_btn .btn {
 			display: flex;
 			width: 122px;
 			height: 40px;
@@ -149,7 +152,8 @@
 			font-size: 16px;
 			font-style: normal;
 			font-weight: 500;
-			line-height: 26px; /* 162.5% */
+			line-height: 26px;
+			/* 162.5% */
 		}
 	</style>
 	<body>
@@ -187,7 +191,8 @@
 			<div id="anzhuo-nav-box"
 				class="heand-mobl p-2 d-block d-sm-none  fixed-top py-2 d-flex justify-content-between align-items-center">
 				<div class="d-flex  justify-content-between align-items-center">
-					<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/annroidicon.png" class="dow-logos me-2" alt="">
+					<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/annroidicon.png" class="dow-logos me-2"
+						alt="">
 					<div class="text-white">
 						<p class="l1 mb-0">聊球下载</p>
 						<p class="l2  mb-0">热情足球迷的终极选择</p>
@@ -204,7 +209,8 @@
 			<div id="ios-nav-box"
 				class="heand-mobl   p-2 d-block d-sm-none  fixed-top py-2 d-flex justify-content-between align-items-center">
 				<div class="d-flex  justify-content-between align-items-center">
-					<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/annroidicon.png" class="dow-logos me-2" alt="">
+					<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/annroidicon.png" class="dow-logos me-2"
+						alt="">
 					<div class="text-white">
 						<p class="l1 mb-0">聊球下载</p>
 						<p class="l2  mb-0">热情足球迷的终极选择</p>
@@ -234,7 +240,9 @@
 							<div class="container text-center d-none d-sm-block " style="padding-top: 20px;">
 								<div class="row">
 									<div class="col">
-										<img class="img-fluid" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/code-329526a8.png?0621" alt="">
+										<img class="img-fluid"
+											src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/code-329526a8.png?0621"
+											alt="">
 									</div>
 									<div class="col d-flex flex-column justify-content-center">
 										<a href="#"
@@ -244,12 +252,11 @@
 												alt="">
 											<span class="text-white">安卓下载</span>
 										</a>
-										<a 
-											class="btn btn-lg dow-app-st btn-outline-dark btn-round mt-1 pc_ios_url"><img
+										<a class="btn btn-lg dow-app-st btn-outline-dark btn-round mt-1 pc_ios_url"><img
 												class="p-2"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
 												alt="">
-											<span  class="text-white">苹果下载</span></a>
+											<span class="text-white">苹果下载</span></a>
 									</div>
 								</div>
 							</div>
@@ -298,12 +305,12 @@
 							<!-- <img src="images/bann1.png" class="rounded img-fluid"> -->
 							<div id="carouselExampleFade" class="carousel slide">
 								<div class="carousel-inner">
-									<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/bann1-0ca91429.png" class="carousel-item d-block w-100 h-100"
-										alt="...">
-									<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/bann2-2ece038d.png" class="carousel-item d-block w-100 h-100"
-										alt="...">
-									<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/bann3-sd2323ss.png" class="carousel-item d-block w-100 h-100"
-										alt="...">
+									<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/bann1-0ca91429.png"
+										class="carousel-item d-block w-100 h-100" alt="...">
+									<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/bann2-2ece038d.png"
+										class="carousel-item d-block w-100 h-100" alt="...">
+									<img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/bann3-sd2323ss.png"
+										class="carousel-item d-block w-100 h-100" alt="...">
 								</div>
 							</div>
 						</div>
@@ -386,7 +393,8 @@
 				</div>
 				<div class="row py-5 mt-5 align-items-center">
 					<div class="col-12 col-sm-6 ">
-						<img class=" w-100" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/itam-bg1-81e31cf4.png" alt="">
+						<img class=" w-100"
+							src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/itam-bg1-81e31cf4.png" alt="">
 					</div>
 					<div class="col-12 col-sm-6  ">
 						<p class="h6 more-text pb-5 ">更多功能等你发现</p>
@@ -424,7 +432,8 @@
 
 					</div>
 					<div class="col-12 col-sm-6 ">
-						<img class="w-100" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/itambg2-58bf3e8f.png" alt="">
+						<img class="w-100" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/itambg2-58bf3e8f.png"
+							alt="">
 					</div>
 				</div>
 
@@ -436,9 +445,15 @@
 						<div class="swiper-box  mx-auto  ">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide"><img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/av1-ac6acc61.png" /></div>
-									<div class="swiper-slide"><img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/av2-db931807.png" /></div>
-									<div class="swiper-slide"><img src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/av3-d0b67c1e.png" /></div>
+									<div class="swiper-slide"><img
+											src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/av1-ac6acc61.png" />
+									</div>
+									<div class="swiper-slide"><img
+											src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/av2-db931807.png" />
+									</div>
+									<div class="swiper-slide"><img
+											src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/av3-d0b67c1e.png" />
+									</div>
 								</div>
 							</div>
 						</div>
@@ -457,7 +472,8 @@
 			</div>
 			<div id="tab4" class="container item-footer p-2 py-5 ">
 				<div class="d-flex flex-column flex-sm-row justify-content-between align-items-center">
-					<div class="col-12 col-sm-6 mb-3"> <img class="logo" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/logo-33a74c19.png" alt="">
+					<div class="col-12 col-sm-6 mb-3"> <img class="logo"
+							src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/logo-33a74c19.png" alt="">
 					</div>
 					<div class="col-12 col-sm-6 mb-3">
 						<span class="float-sm-none  float-md-end ">
@@ -483,13 +499,13 @@
 				</div>
 			</div>
 			<div id="myModal" class="modal">
-			  <div class="modal-content">
-			    <span class="close">&times;</span>
-			    <img src="assets/info.png" class="modal_info" alt="">
-				<div class="modal_btn">
-					<a href="" class="main_ios_url"><span class="btn">我知道了</span></a>
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<img src="assets/info.png" class="modal_info" alt="">
+					<div class="modal_btn">
+						<a href="" class="main_ios_url"><span class="btn">我知道了</span></a>
+					</div>
 				</div>
-			  </div>
 			</div>
 		</div>
 	</body>
@@ -633,39 +649,37 @@
 				document.querySelector(".top-dow-btn").style.display = 'none';
 			}
 		}
-		
+
 		var _hmt = _hmt || [];
 		(function() {
-		  var hm = document.createElement("script");
-		  hm.src = "https://hm.baidu.com/hm.js?9730d1b943dbd9ef5aa8a28e9f218edc";
-		  var s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(hm, s);
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?9730d1b943dbd9ef5aa8a28e9f218edc";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
 		})();
-		
+
 		// 获取弹窗元素
 		var modal = document.getElementById("myModal");
-		
+
 		// 获取关闭按钮元素
 		var closeBtn = document.getElementsByClassName("close")[0];
-		
+
 		// 点击弹窗以外的区域，关闭弹窗
 		window.onclick = function(event) {
-		  if (event.target == modal) {
-		    modal.style.display = "none";
-		  }
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
 		}
-		
+
 		// 点击关闭按钮，关闭弹窗
 		closeBtn.onclick = function() {
-		  modal.style.display = "none";
+			modal.style.display = "none";
 		}
-		
+
 		// 打开弹窗
 		function openModal() {
-		  modal.style.display = "block";
+			modal.style.display = "block";
 		}
-		
-		
 	</script>
 
 </html>
