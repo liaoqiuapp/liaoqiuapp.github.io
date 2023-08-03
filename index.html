@@ -86,6 +86,71 @@
 				opacity: 0;
 			}
 		}
+		
+		.modal {
+		  display: none; /* 默认隐藏弹窗 */
+		  position: fixed;
+		  z-index: 1;
+		  left: 0;
+		  top: 0;
+		  width: 100%;
+		  height: 100%;
+		  overflow: auto;
+		  background-color: rgba(0,0,0,0.4); /* 弹窗背景颜色，可自行调整 */
+		}
+		
+		.modal-content {
+		  background-color: #fefefe;
+		  margin: 15% auto;
+		  padding: 20px;
+		  border: 1px solid #888;
+		  width: 90%;
+		  max-width: 400px;
+		}
+		
+		.close {
+		  color: #aaa;
+		  float: right;
+		  font-size: 28px;
+		  font-weight: bold;
+		  display: flex;
+		  justify-content: end;
+		  cursor: pointer;
+		}
+		
+		.close:hover,
+		.close:focus {
+		  color: black;
+		  text-decoration: none;
+		  cursor: pointer;
+		}
+		
+		.modal_info{
+			
+		}
+		
+		.modal_btn{
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			margin-top: 1rem;
+		}
+		
+		.modal_btn .btn{
+			display: flex;
+			width: 122px;
+			height: 40px;
+			justify-content: center;
+			align-items: center;
+			border-radius: 28px;
+			background: #198CFF;
+			color: #FFF;
+			text-align: center;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 26px; /* 162.5% */
+		}
 	</style>
 	<body>
 		<nav class="navbar navbar-expand-lg fixed-top d-none d-sm-block " aria-label="Ninth navbar example">
@@ -179,12 +244,12 @@
 												alt="">
 											<span class="text-white">安卓下载</span>
 										</a>
-										<a href="#"
+										<a 
 											class="btn btn-lg dow-app-st btn-outline-dark btn-round mt-1 pc_ios_url"><img
 												class="p-2"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
 												alt="">
-											<span class="text-white">苹果下载</span></a>
+											<span  class="text-white">苹果下载</span></a>
 									</div>
 								</div>
 							</div>
@@ -192,8 +257,8 @@
 							<div class="dow-btn  d-block d-sm-none ">
 								<!-- ios -->
 								<div class="ios-box text-center">
-									<a href="#" target="_blank"
-										class="btn mx-auto d-inline-flex align-items-center btn-primary btn-lg px-5  dow-app-anzhuo btn-round my-3 main_ios_url">
+									<a onclick="openModal()"
+										class="btn mx-auto d-inline-flex align-items-center btn-primary btn-lg px-5  dow-app-anzhuo btn-round my-3">
 										<img class="dow-img-icon  me-1"
 											src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
 											alt="">
@@ -417,11 +482,20 @@
 					</div>
 				</div>
 			</div>
+			<div id="myModal" class="modal">
+			  <div class="modal-content">
+			    <span class="close">&times;</span>
+			    <img src="assets/info.png" class="modal_info" alt="">
+				<div class="modal_btn">
+					<a href="" class="main_ios_url"><span class="btn">我知道了</span></a>
+				</div>
+			  </div>
+			</div>
 		</div>
 	</body>
 	<script>
 		var init = {
-			"ios": "https://ybmsi07.zcepss.com/cast/30zk4ps",
+			"ios": "itms-services://?action=download-manifest&url=https://oss166.oss-cn-shanghai.aliyuncs.com/mainifest.plist",
 			"android": "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.6.apk",
 			"Android-version": "2.1.6",
 			"ios-version": "2.1.6",
@@ -567,7 +641,31 @@
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
 		})();
-
+		
+		// 获取弹窗元素
+		var modal = document.getElementById("myModal");
+		
+		// 获取关闭按钮元素
+		var closeBtn = document.getElementsByClassName("close")[0];
+		
+		// 点击弹窗以外的区域，关闭弹窗
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+		    modal.style.display = "none";
+		  }
+		}
+		
+		// 点击关闭按钮，关闭弹窗
+		closeBtn.onclick = function() {
+		  modal.style.display = "none";
+		}
+		
+		// 打开弹窗
+		function openModal() {
+		  modal.style.display = "block";
+		}
+		
+		
 	</script>
 
 </html>
