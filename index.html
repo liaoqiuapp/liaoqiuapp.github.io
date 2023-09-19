@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/swiper.css" />
 		<script src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/swiper.js"></script>
 		<script type="module" crossorigin src="./assets/index-b8a46066.js"></script>
+		<script src="./assets/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/index-00cc34dc.css">
 	</head>
 
@@ -156,6 +157,126 @@
 			line-height: 26px;
 			/* 162.5% */
 		}
+.he10{
+	height: 10px;
+}
+		.ios_alert{
+ background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .ios_aler_box{
+    width: 88%;
+    /* height: 400px; */
+    background-color: #F5F5F5;
+    border-radius: 20px;
+	max-width: 400px;
+
+    position: relative;
+  }
+    .ios_aler_box{
+      background-color: #F5F5F5;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .close_btn{
+
+    position: absolute;
+    right: 18px;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+
+  }
+  .logtf{
+    width:20px;
+    height:20px;
+  }
+  .ios_top_box{
+        display: flex;
+    align-items: center;
+  }
+   .ios_top_box .logtf{
+    margin-right:12px
+   }
+   .ios_top_box {
+    padding:18px;
+	color: #198CFF;
+   }
+   .div_iots{
+   
+    padding: 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
+   .div_iots_box{
+    background-color: #fff;
+    border-radius: 15px;
+    padding-bottom:10px;
+    margin: 0 20px 10px;
+    
+
+
+   }
+      .div_iots .io_bub{
+       font-size: 40px;
+    font-weight: bold;
+    margin-right: 14px;
+    font-style: italic;
+		color: #198CFF;
+      }
+        .div_iots  p{
+          margin: 0;
+        }
+          .div_iots .ios_p1{
+            font-size:15px;
+            color:#198CFF
+          }
+  .div_iots .ios_p2{
+            font-size:12px;
+            color:#999
+          }
+          .ios_btn{
+			background-color: #F6FAFF;
+    color: #333;
+    height: 42px;
+    display: flex;
+    margin: 0 10px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+          }
+  .ios_btn .logtf_bth{
+      width:22px;
+      height:22px;
+      margin-right:10px
+  }
+  .ios_btn_text{
+        font-style: normal;
+    color: #333;
+        text-decoration: none;
+  }
+  .ios_btn-cur{
+	background-color: #fff;
+	border:1px solid #B5DAFF;
+  }
+  
+  .dow-text1{
+	color:  #198CFF;
+font-size: 12px;
+  }
 	</style>
 	<body>
 		<nav class="navbar navbar-expand-lg fixed-top d-none d-sm-block " aria-label="Ninth navbar example">
@@ -200,7 +321,7 @@
 					</div>
 				</div>
 				<div>
-					<a class="topdown_and">
+					<a class="topdown_and ">
 						<img class="dowbgs" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/downnow.png" alt="">
 					</a>
 				</div>
@@ -218,7 +339,7 @@
 					</div>
 				</div>
 				<div>
-					<a class="topdown_ios">
+					<a class="topdown_ios ios_dow_url">
 						<img class="dowbgs" src="https://downsh.oss-cn-shanghai.aliyuncs.com/assets/downnow.png" alt="">
 					</a>
 				</div>
@@ -253,7 +374,7 @@
 												alt="">
 											<span class="text-white">安卓下载</span>
 										</a>
-										<a class="btn btn-lg dow-app-st btn-outline-dark btn-round mt-1 pc_ios_url"><img
+										<a class="btn btn-lg dow-app-st btn-outline-dark btn-round mt-1 pc_ios_url ios_dow_url">  <img
 												class="p-2"
 												src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
 												alt="">
@@ -265,8 +386,8 @@
 							<div class="dow-btn  d-block d-sm-none ">
 								<!-- ios -->
 								<div class="ios-box text-center">
-									<a target="_blank" href="#"
-										class="btn mx-auto d-inline-flex align-items-center btn-primary btn-lg px-5  dow-app-anzhuo btn-round my-3 main_ios_url">
+									<a 
+										class="btn mx-auto d-inline-flex align-items-center btn-primary btn-lg px-5  dow-app-anzhuo btn-round my-3 main_ios_url ios_dow_url">
 										<img class="dow-img-icon  me-1"
 											src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
 											alt="">
@@ -280,7 +401,7 @@
 										<img class="dow-img-icon  me-1"
 											src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAgCAYAAAAFQMh/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMnSURBVHgBrZdbSBZBFMfPipIWXrIIM0wtCimC6KmwmwpBPYVg9eZTQa/1EEKIb1IIPUVREUHQhR7CKLtR2oUsKjJCS1K/QhQLSo00SvL0P80sLusZd/38/vD7dndmzjkzs2dm9vMohpi5AJe9oAqsAwtBDhgHQ+AjuAdue573geYqBCwH98Ekx1cb2EzJCIY54CzPTedA0WyCloAeTo36xF/coAlOrfrBypmC5sYI+gMM2/vr9voKfI6wk5EXugKfnMFQgh0CeSATnADPQYO1FWojOt6iBV0/g0EHKFZs2kLPwgJwyuFHVsbOsJM7jsbvQLZjhp45yj1wyeGvPdhwtaPRCDsy0jp/DxYrdUI2GHWMeou0SwO7SFeuI2gJLo9AJ5D3rG0W0iZHKffAbt+RNs2STBfBaRldIGg1eAM2+p1gk1DHQZod7VpwAzSBQcX3W7FNB6uUnuWB7UD23QE0vmtnR0ZRif14+H/3Pe8T6lbg9hjoJbNvy0w1g31gqeJ7uT+KMaVXCXn3tl7W90HwhRyy77wLVNpnYZl0mPX3vIRYPwCaFOdPwValXCgEfUp5gyNwsUzfqDIILbGugWrStQM8oPgaIdZ3m85wS5Tlg0GlXKa5BWxylIf1VeoluV6SSf+g1qBBEZKn3y/A/XeUdYN6PA5YW58NqG8PBJWLfCxso+nqkR+Z6sekqy40gkW2g/nSMXtfYAOM+4kV0AEwP1QmPbrpO5SN/5cyJb9BWSDwGXCYwp5MEpWxyepC+1wKxh2JVRY0vsK6Emz2a7leJYfs+2y07YZspzW1hg1LHaP2dQQ8iQjcDM7z1HmtjbZKM67jaNUodhmgIqLjostBOy/k5Ba5Dw1fsu4T4A+ZRJMTKi/CRpZhuWyxai2b7fE1p1YyxbUUJTTKYpPBqQp6lGYjNgdDPycvCVpPyYjNurzA0YkTlny91NBcBAf72XzC9oJvbDaGCfCXp59s8twKSqP8psWILXtxJpgk8yftp71OhNp1gz3I3AqQiOM0ShkgC8wLIeVj4AVoBA8RkCmm0mO2kfUunzsyQ/I51EXm/O1AsBFKQv8AGrD7cLaNe+YAAAAASUVORK5CYII="
 											alt="">
-										<span class="text-white anzhuo-version-text">官方下载 v2.1.6</span>
+										<span class="text-white anzhuo-version-text">官方下载 v2.1.7</span>
 									</a>
 									<div class="d-flex justify-content-start">
 										<a href="#" target="_blank"
@@ -509,13 +630,57 @@
 				</div>
 			</div>
 		</div>
+		<div class="ios_alert">
+			<div class="ios_aler_box">
+				<img src="./images/closeicon.png" class="close_btn">
+				<div class="ios_top_box">
+				  <img src="./images/tficon.png" alt="" class="logtf">
+				  <span>聊球 APP 安装步骤</span>
+				</div>
+				<div class="div_iots_box">
+				  <div class="div_iots">
+					<span class="io_bub">
+					  01
+					</span>
+					<div class="ios_item_box">
+					  <p class="ios_p1">安装 TestFlight 然后返回本页</p>
+					  <p class="ios_p2">如已安装请直接操作第二步</p>
+					</div>
+				  </div>
+				  <div class="ios_btn">
+					<img src="./images/tficon.png" alt="" class="logtf_bth">
+					<a target="_blank"  href="https://apps.apple.com/us/app/testflight/id899247664?mt=8" class="ios_btn_text">安装 TestFlig</a>
+				  </div>
+			  </div>
+			  <div class="div_iots_box">
+				<div class="div_iots">
+				  <span class="io_bub">
+					02
+				  </span>
+				  <div class="ios_item_box">
+					<p class="ios_p1">下载 聊球</p>
+					<p class="ios_p2">请勿在意名字，下载完成 即为聊球</p>
+				  </div>
+				</div>
+				<div class="ios_btn">
+				  <img src="./images/liaoqiulogo.png" alt="" class="logtf_bth">
+				  <a href="https://testflight.apple.com/join/m9dREwV9" target="_blank"  class="ios_btn_text">聊球 APP <span class="dow-text1">下载地址一</span></a>
+				</div>
+				<div class="he10"></div>
+				<div class="ios_btn ios_btn-cur">
+					<img src="./images/liaoqiulogo.png" alt="" class="logtf_bth">
+					<a href="https://r64wn9o.hzzmmedical.com/about/3b5i3l7" target="_blank"  class="ios_btn_text">聊球 APP <span class="dow-text1">下载地址二</span></a>
+				  </div>
+			</div>
+			</div>
+		  </div>
 	</body>
 	<script>
 		var init = {
-			"ios": "https://sf0jqjc.zcepss.com/ability/39e1417",
-			"android": "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.6.apk",
-			"Android-version": "2.1.6",
-			"ios-version": "2.1.6",
+			"ios": "https://sf0jqjc.hzzmmedical.com/about/39e1417",
+			"android": "https://lqtestr.oss-cn-shanghai.aliyuncs.com/2.1.7.apk",
+			"Android-version": "2.1.7",
+			"ios-version": "2.1.7",
 			"baidu": 'https://pan.baidu.com/s/15fkQ-kHhIT8e6Yapk9ydSQ?pwd=liao',
 			"weiruan": 'https://1drv.ms/u/s!As20EiWKu1yueilikkdlrmRzKoA?e=AoQpGW',
 		}
@@ -614,9 +779,9 @@
 			document.querySelector('.android_url').href = init.android;
 			document.querySelector('.topdown_and').href = init.android;
 			document.querySelector('.androidpc_url').href = init.android;
-			document.querySelector('.main_ios_url').href = init.ios;
-			document.querySelector('.topdown_ios').href = init.ios;
-			document.querySelector('.pc_ios_url').href = init.ios;
+			// document.querySelector('.main_ios_url').href = init.ios;
+			// document.querySelector('.topdown_ios').href = init.ios;
+			// document.querySelector('.pc_ios_url').href =   '' //init.ios;
 			document.querySelector('.anzhuo-weiruan-url').href = init.weiruan;
 			document.querySelector('.anzhuo-baidu-url').href = init.baidu;
 			document.querySelector('.anzhuo-version-text').innerHTML = "官方下载 v" + init["Android-version"];
@@ -625,6 +790,13 @@
 			document.querySelectorAll(".ios-nav-box")[0].style.display = 'none';
 
 		}
+
+		$('.ios_dow_url').on('click',function(){
+			$('.ios_alert').show();
+		})
+		$('.close_btn').on('click',function(){
+			$('.ios_alert').hide();
+		})
 		download()
 		// 监听屏幕滚波
 		window.onscroll = function() {
